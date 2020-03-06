@@ -1,2 +1,2 @@
-# passwor-generator
-A password generator with password customizatio options.
+# password-generator
+A password generator with various password customization options.

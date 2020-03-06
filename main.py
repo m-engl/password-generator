@@ -6,19 +6,7 @@ import string
 import random
 from enum import Enum
 from enum import IntEnum
-
-#==================================================
-#==================CHARACTER SETS==================
-#==================================================
-
-lowerCase = string.ascii_lowercase
-upperCase = string.ascii_uppercase
-numbers = string.digits
-specialChars = "!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~" 
-
-weakSet = lowerCase + numbers
-mediumSet = lowerCase + upperCase + numbers
-strongSet = lowerCase + upperCase + numbers + specialChars
+import charSet as cs
 
 # For later version: test to include custom word.
 # User types in custom word(s). Change to input when used.
@@ -82,13 +70,13 @@ while(True):
         
 
         if strengthChoice == Strength.Weak:
-            chosenSet = weakSet
+            chosenSet = cs.weakSet
 
         elif strengthChoice == Strength.Medium:
-            chosenSet = mediumSet
+            chosenSet = cs.mediumSet
 
         elif strengthChoice == Strength.Strong:
-            chosenSet = strongSet
+            chosenSet = cs.strongSet
 
         password = ''.join(random.choice(chosenSet) for _ in range(length))
 
