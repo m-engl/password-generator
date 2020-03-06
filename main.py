@@ -14,7 +14,8 @@ import customWord as cw
 #=====================CHOICES======================
 #==================================================
 
-MainMenu = IntEnum('MainMenu', {'GeneratePassword' : 1,
+MainMenu = IntEnum('MainMenu',
+{'GeneratePassword' : 1,
 'CustomWord' : 2,
 'Exit' : 3})
 
@@ -22,6 +23,15 @@ Strength = IntEnum(
             'Strength', 
             {'Weak' : 1, 'Medium' : 2, 'Strong' : 3} 
             )
+
+CustomWord = IntEnum('CustomWord',
+{'MixCase' : 1,
+'Lookalikes' : 2,
+'MixedAndLookalikes' : 3,
+'AddSymbols' : 4,
+'MixedAndAddedSymbols' : 5    
+}
+)
 
 #==================================================
 #=======================MAIN=======================
@@ -38,7 +48,7 @@ as well as for what kind of characters you want to use.
 
 while(True):
 
-    startChoice = int(input(menus.mainMenu + "Your choice: " ))
+    startChoice = int(input(menus.mainMenu))
 
 ############################################################
 
@@ -77,7 +87,7 @@ while(True):
 
     elif startChoice == MainMenu.CustomWord:
         print("\n" + "=== GENERATE PASSWORD USING YOUR WORD ===" + "\n")
-        insideCustomWordChoice = int(input((menus.customPasswordMenu + "YOUR CHOICE: "))
+        insideCustomWordChoice = int(input((menus.customPasswordMenu))
 
 
     )

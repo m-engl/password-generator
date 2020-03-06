@@ -6,14 +6,16 @@ mainMenu = """
     1 - Generate a password
     2 - Generate customized password - use your custom word
     3 - Exit
-    """
+    
+    YOUR CHOICE: """
 
 strengthChoiceMenu = """
         Choose the level/strength of your password:
                         1 - WEAK - lowercase and numbers
                         2 - MEDIUM - mixed case with numers
-                        3 - STRONG - mixed case with numbers and special characters
-                        Your choice: """
+                        3 - STRONG - mixed case with numbers and special characters  
+                        
+        YOUR CHOICE: """
 
 customPasswordMenu = """
     === CUSTOM PASSWORD MENU ===
@@ -29,4 +31,5 @@ customPasswordMenu = """
         Example: 2 additional special characters randomly: 'word' --> $wo!rd
     5 - Mix case and add special characters or numbers or both
         Example: add numbers: 'word' -> Wo1rD
-        """
+        
+    YOUR CHOICE: """
