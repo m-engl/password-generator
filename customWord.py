@@ -9,10 +9,8 @@
 
 #import
 
-from main import lowerCase, upperCase
 import string
 import random
-
 
 # read in word
 
@@ -31,10 +29,11 @@ def randomize_case(letter):
         letter = letter.upper()
     elif randomChoice == 'a' :
         letter = letter
+    
+    return letter
 
-# 1 - mix case randomly
+# 1 - mix case randomly      
+        
+wordWithRandomCase = ''.join(randomize_case(letter) for letter in customWord)
 
-def get_random_case(customWord):
-
-    for letter in customWord:
-        randomize_case(letter)
+print(wordWithRandomCase)
