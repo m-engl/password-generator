@@ -25,42 +25,72 @@ strongSet = lowerCase + upperCase + numbers + specialChars
 customWord = 'myTestWord'
 
 #==================================================
-#=======================MAIN=======================
+#=====================CHOICES======================
 #==================================================
 
+MainMenu = IntEnum('MainMenu', {'GeneratePassword' : 1, 'Exit' : 2})
+
+Strength = IntEnum(
+            'Strength', 
+            {'Weak' : 1, 'Medium' : 2, 'Strong' : 3} 
+            )
+
+#==================================================
+#=======================MAIN=======================
+#==================================================
+ 
 print(
-    """
+"""
 Welcome to the password generator.
 You are going to be asked for the length of your password
 as well as for what kind of characters you want to use.
 """)
 
-length = int(input(
-    """How long should the password be? 
-                Numer of characters: """))
+#==================MAIN LOOP=======================
 
-Strength = IntEnum(
-    'Strength', 
-    {'Weak' : 1, 'Medium' : 2, 'Strong' : 3} 
-    )
+while(True):
 
-strengthChoice = int(input('''
-Choose the level/strength of your password:
-                1 - WEAK - lowercase and numbers
-                2 - MEDIUM - mixed case with numers
-                3 - STRONG - mixed case with numbers and special characters
-                Your choice: '''))
+    startChoice = int(input(
+    """
+    === MAIN MENU ===
+    Choose the option (enter number):
+    1 - Generate a password
+    2 - Exit
+    Your choice: """))
 
-if strengthChoice == Strength.Weak:
-    chosenSet = weakSet
+    if startChoice == MainMenu.Exit:
+        print('\n *** EXIT ***\n')
+        break
 
-elif strengthChoice == Strength.Medium:
-    chosenSet = mediumSet
+    elif startChoice == MainMenu.GeneratePassword:
+        
+        print("\n" + "=== GENERATE PASSWORD ===" + "\n")
 
-elif strengthChoice == Strength.Strong:
-    chosenSet = strongSet
+        length = int(input("""
+        How long should the password be? 
+                    Numer of characters: """))
+        print("\n")
 
-password = ''.join(random.choice(chosenSet) for _ in range(length))
 
-print('Here it is:', password)
+
+        strengthChoice = int(input('''
+        Choose the level/strength of your password:
+                        1 - WEAK - lowercase and numbers
+                        2 - MEDIUM - mixed case with numers
+                        3 - STRONG - mixed case with numbers and special characters
+                        Your choice: '''))
+        
+
+        if strengthChoice == Strength.Weak:
+            chosenSet = weakSet
+
+        elif strengthChoice == Strength.Medium:
+            chosenSet = mediumSet
+
+        elif strengthChoice == Strength.Strong:
+            chosenSet = strongSet
+
+        password = ''.join(random.choice(chosenSet) for _ in range(length))
+
+        print('\n Here it is:', password)
 
