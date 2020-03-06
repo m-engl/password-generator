@@ -52,7 +52,46 @@ print(wordWithRandomCase)
 
 weirdLookingWord = ''.join(find_lookalike(letter) for letter in customWord)
 
-# weirdLookingWord = ''.join(find_lookalike(letter) for letter in customWord)
-
-print(random.choice(sd.specialsDict['w'.upper()]))
 print(weirdLookingWord)
+
+# 3 mix case randomly and change characters to special chars or numbers that are "lookalikes"
+#   with two lookalikes
+
+numberOfSpecialCharacters = 3
+
+# numberOfSpecialCharacters = int(input("""
+# How many letters in your word do you want to become
+# special characters or special character clusters? 
+# """))
+
+def mix_chars_and_case(customWord):
+
+    #create mixed case word to begin with
+    wordWithRandomCase = ''.join(randomize_case(letter) for letter in customWord)
+
+    # for the substitution operation, string to list conversion
+    wordAsList = list(wordWithRandomCase)
+
+    # choose the 'a' number of letters to be changed to specials
+    # by getting their index number
+    a = numberOfSpecialCharacters
+    indexToChange = random.sample(range(len(customWord)), a)
+    print(indexToChange)
+
+    # get to all the chosen index numbers and change them to lookalike special characters
+    for indexNumber in indexToChange:
+        b = indexNumber
+        letterToSubstitute = customWord[b]
+        letterAsNewCharacter = find_lookalike(letterToSubstitute)
+        wordAsList[b] = letterAsNewCharacter # substitution
+
+    # list to string again
+    mixedCaseAndSpecials = ''.join(wordAsList)
+
+    return mixedCaseAndSpecials
+        
+    
+    # 
+
+
+print(mix_chars_and_case(customWord))
