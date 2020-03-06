@@ -6,17 +6,17 @@ import string
 import random
 from enum import Enum
 from enum import IntEnum
+import menus
 import charSet as cs
-
-# For later version: test to include custom word.
-# User types in custom word(s). Change to input when used.
-customWord = 'myTestWord'
+import customWord as cw
 
 #==================================================
 #=====================CHOICES======================
 #==================================================
 
-MainMenu = IntEnum('MainMenu', {'GeneratePassword' : 1, 'Exit' : 2})
+MainMenu = IntEnum('MainMenu', {'GeneratePassword' : 1,
+'CustomWord' : 2,
+'Exit' : 3})
 
 Strength = IntEnum(
             'Strength', 
@@ -38,17 +38,15 @@ as well as for what kind of characters you want to use.
 
 while(True):
 
-    startChoice = int(input(
-    """
-    === MAIN MENU ===
-    Choose the option (enter number):
-    1 - Generate a password
-    2 - Exit
-    Your choice: """))
+    startChoice = int(input(menus.mainMenu + "Your choice: " ))
+
+############################################################
 
     if startChoice == MainMenu.Exit:
         print('\n *** EXIT ***\n')
         break
+
+############################################################
 
     elif startChoice == MainMenu.GeneratePassword:
         
@@ -59,14 +57,7 @@ while(True):
                     Numer of characters: """))
         print("\n")
 
-
-
-        strengthChoice = int(input('''
-        Choose the level/strength of your password:
-                        1 - WEAK - lowercase and numbers
-                        2 - MEDIUM - mixed case with numers
-                        3 - STRONG - mixed case with numbers and special characters
-                        Your choice: '''))
+        strengthChoice = int(input(menus.strengthChoiceMenu))
         
 
         if strengthChoice == Strength.Weak:
@@ -82,3 +73,11 @@ while(True):
 
         print('\n Here it is:', password)
 
+############################################################
+
+    elif startChoice == MainMenu.CustomWord:
+        print("\n" + "=== GENERATE PASSWORD USING YOUR WORD ===" + "\n")
+        insideCustomWordChoice = int(input((menus.customPasswordMenu + "YOUR CHOICE: "))
+
+
+    )
