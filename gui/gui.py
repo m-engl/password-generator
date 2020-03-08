@@ -29,7 +29,12 @@ lowerFrame.grid(row=3, column=0, columnspan=2)
 # later there is going to be an image
 # about h=60 and w=120 px, right now it is text units as
 # when stuff contain text, h and w are in text units
-Logo = Label(upperFrame, text="LOGO", height = 6, width = 10, relief=RIDGE)
+
+# Logo = Label(upperFrame, text="LOGO", height = 6, width = 10, relief=RIDGE)
+# Logo.grid(row=0, column=0, rowspan=3, padx=10, pady=5)
+
+logo = PhotoImage(file="logo.gif")
+Logo = Label(upperFrame, image=logo)
 Logo.grid(row=0, column=0, rowspan=3, padx=10, pady=5)
 
 TextBegin = Label(upperFrame, text="Before generating the password, choose your options below.")
