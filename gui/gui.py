@@ -6,7 +6,7 @@ root.title('My Ultimate Password Generator')
 # important variables
 # MAIN MENU GROUP
 MainMenu = IntVar()
-ChooseStrength = IntVar()
+
 
 # CREATE FRAMES
 upperFrame = Frame(root, height=100, width=630) # , highlightbackground="black", highlightthickness=1
@@ -78,13 +78,18 @@ LabelUserEnteredLength.grid(row=1, column=4, padx=2, pady=2, sticky=W)
 LabelChooseStrength = LabelUserEnteredLength = Label(leftFrameUpper, text='Choose strength:')
 LabelChooseStrength.grid(row=2, column=1, padx=2, pady=2, sticky=W)
 
-ChooseWeak = Radiobutton(leftFrameUpper, text="Weak", variable=ChooseStrength, value=1)
-ChooseMedium = Radiobutton(leftFrameUpper, text="Medium", variable=ChooseStrength, value=2)
-ChooseStrong = Radiobutton(leftFrameUpper, text="Strong", variable=ChooseStrength, value=3)
+ChooseStrength = IntVar()
 
-ChooseWeak.grid(row=3, column=1, sticky=W, columnspan=4)
-ChooseMedium.grid(row=4, column=1, sticky=W, columnspan=4)
-ChooseStrong.grid(row=5, column=1, sticky=W, columnspan=4)
+strengthMODES = [
+    (1, "Weak"),
+    (2, "Medium"),
+    (3, "Strong")
+]
+i = 3
+for sValue, description in strengthMODES:
+    rb = Radiobutton(leftFrameUpper, text=description, variable=ChooseStrength, value=sValue)
+    rb.grid(row=i, column=1, sticky=W, columnspan=4)
+    i += 1
 
 # INSIDE THE LEFT LOWER FRAME leftFrameLower
 # GENERATE PASSWORD WITH WORD SEQUENCE
@@ -153,29 +158,56 @@ for mode, description in customWordMODES:
         r.grid(row=i, column=1, padx=2, pady=2, sticky=W, columnspan=4)
         i += 1
 
-LabelEnterHowMany = Label(rightFrame, text="Enter how many letters you want to\n have changed to \"look-alikes\": ")
-LabelEnterHowMany.grid(row=6, column=2, sticky=W)
+LabelEnterHowMany_mixChange = Label(rightFrame, text="Enter how many new characters you want to add: ")
+LabelEnterHowMany_mixChange.grid(row=11, column=2, sticky=W)
 
-FieldEnterHowMany = Text(rightFrame, height=1, width = 3)
-FieldEnterHowMany.grid(row=6, column=3, padx=2, pady=2)
+FieldEnterHowMany_mixChange  = Text(rightFrame, height=1, width = 3)
+FieldEnterHowMany_mixChange.grid(row=11, column=3, padx=2, pady=2)
 
-EnterHowManyOKButton = Button(rightFrame, text="OK", height=1, width = 4)
-EnterHowManyOKButton.grid(row=6, column=4, padx=2, pady=2, sticky=W)
+EnterHowManyOKButton_mixChange  = Button(rightFrame, text="OK", height=1, width = 4)
+EnterHowManyOKButton_mixChange.grid(row=11, column=4, padx=2, pady=2, sticky=W)
 
-LabelUserEnteredHowMany = LabelUserEnteredLength = Label(rightFrame, text='2', fg='grey')
-LabelUserEnteredHowMany.grid(row=6, column=5, padx=2, pady=2, sticky=W)
+LabelUserEnteredHowMany_mixChange  = LabelUserEnteredLength = Label(rightFrame, text='3', fg='grey')
+LabelUserEnteredHowMany_mixChange.grid(row=11, column=5, padx=2, pady=2, sticky=W)
 
 
-wordCHOICES = [
+mixAndChangeWordCHOICES = [
     ("numword", "numbers"),
-    ("specword", "special characters")
+    ("specword", "special characters"),
+    ("mixword", "mixed case")
 ]
 
-i=7
-for variableName, description in wordCHOICES:
+i=12
+for variableName, description in mixAndChangeWordCHOICES:
     variableName = IntVar()
     cb = Checkbutton(rightFrame, text=description, variable=variableName)
     cb.grid(row=i, column=2, sticky=W)
+    i += 1
+
+LabelEnterHowMany_addSpecials = Label(rightFrame, text="Enter how many letters you want to\n have changed to \"look-alikes\": ")
+LabelEnterHowMany_addSpecials.grid(row=6, column=2, sticky=W)
+
+FieldEnterHowMany_addSpecials = Text(rightFrame, height=1, width = 3)
+FieldEnterHowMany_addSpecials.grid(row=6, column=3, padx=2, pady=2)
+
+EnterHowManyOKButton_addSpecials = Button(rightFrame, text="OK", height=1, width = 4)
+EnterHowManyOKButton_addSpecials.grid(row=6, column=4, padx=2, pady=2, sticky=W)
+
+LabelUserEnteredHowMany_addSpecials = LabelUserEnteredLength = Label(rightFrame, text='2', fg='grey')
+LabelUserEnteredHowMany_addSpecials.grid(row=6, column=5, padx=2, pady=2, sticky=W)
+
+
+addSpecialsCHOICES = [
+    ("numseq", "numbers"),
+    ("specseq", "special characters"),
+    ("mixseq", "mixed case")
+]
+
+i=6
+for variableName, description in addSpecialsCHOICES:
+    variableName = IntVar()
+    cb = Checkbutton(leftFrameLower, text=description, variable=variableName)
+    cb.grid(row=i, column=1, sticky=W, columnspan=4)
     i += 1
 
 # INSIDE THE LOWER FRAME lowerFrame
