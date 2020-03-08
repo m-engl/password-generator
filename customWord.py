@@ -21,14 +21,18 @@ customWord = "thisismytestword"
 
 def randomize_case(letter):
 
-    randomChoice = random.choice('abc')
+    if letter == " ":
+        letter = ""
 
-    if randomChoice == 'a' :
-        letter = letter.lower()
-    elif randomChoice == 'b' :
-        letter = letter.upper()
-    elif randomChoice == 'a' :
-        letter = letter
+    elif letter != " ":
+        randomChoice = random.choice('abc')
+        if randomChoice == 'a' :
+            letter = letter.lower()
+        elif randomChoice == 'b' :
+            letter = letter.upper()
+        elif randomChoice == 'c' :
+            letter = letter
+
     
     return letter
 

@@ -124,7 +124,7 @@ for variableName, description in seqCHOICES:
 # INSIDE THE RIGHT FRAME rightFrame
 # CUSTOM WORD
 ChooseCustomWord = Radiobutton(rightFrame, text="\"Crazy word\" password", variable=MainMenu, value=3, justify="left")
-ChooseCustomWord.grid(row=0, column=0,  padx=(0, 5), sticky=W, columnspan=3)
+ChooseCustomWord.grid(row=0, column=0,  padx=(0, 5), sticky=W, columnspan=5)
 
 # CUSTOM WORD ENTER and confirm
 
@@ -141,7 +141,7 @@ LabelUserEnteredWord = Label(rightFrame, text='peculiar', fg='grey')
 LabelUserEnteredWord.grid(row=2, column=1, padx=2, pady=2, sticky=W)
 
 LabelMenuWord = Label(rightFrame, text='Choose your options:')
-LabelMenuWord.grid(row=3, column=0, padx=(25, 5), pady=(5), sticky=W)
+LabelMenuWord.grid(row=3, column=0, padx=(25, 5), pady=(5), sticky=W,  columnspan=5)
 
 
 
@@ -179,13 +179,13 @@ LabelEnterHowMany_mixChange = Label(rightFrame, text="Enter how many letters you
 LabelEnterHowMany_mixChange.grid(row=7, column=0, padx=(45,5), sticky=W, columnspan=2)
 
 FieldEnterHowMany_mixChange = Text(rightFrame, height=1, width = 3, bg="snow2")  # , relief="solid", borderwidth=1
-FieldEnterHowMany_mixChange.grid(row=7, column=1, padx=5, pady=2)
+FieldEnterHowMany_mixChange.grid(row=7, column=2, padx=5, pady=2)
 
 EnterHowManyOKButton_mixChange = Button(rightFrame, text="OK", height=1, width = 4)
-EnterHowManyOKButton_mixChange.grid(row=7, column=2, padx=2, pady=2, sticky=W)
+EnterHowManyOKButton_mixChange.grid(row=7, column=3, padx=2, pady=2, sticky=W)
 
 LabelUserEnteredHowMany_mixChange = Label(rightFrame, text='2', fg='grey')
-LabelUserEnteredHowMany_mixChange.grid(row=7, column=3, padx=2, pady=2, sticky=W)
+LabelUserEnteredHowMany_mixChange.grid(row=7, column=4, padx=2, pady=2, sticky=W)
 
 
 # add specials with option choice
@@ -194,16 +194,16 @@ LabelEnterHowMany_addSpecials = Label(rightFrame, text="Enter how many new\nchar
 LabelEnterHowMany_addSpecials.grid(row=12, column=0, padx=(45, 5), sticky=W, columnspan=2)
 
 FieldEnterHowMany_addSpecials  = Text(rightFrame, height=1, width = 3, bg="snow2")  # , relief="solid", borderwidth=1
-FieldEnterHowMany_addSpecials.grid(row=12, column=1, padx=2, pady=2)
+FieldEnterHowMany_addSpecials.grid(row=12, column=2, padx=2, pady=2)
 
 EnterHowManyOKButton_addSpecials  = Button(rightFrame, text="OK", height=1, width = 4)
-EnterHowManyOKButton_addSpecials.grid(row=12, column=2, padx=2, pady=2, sticky=W)
+EnterHowManyOKButton_addSpecials.grid(row=12, column=3, padx=2, pady=2, sticky=W)
 
 LabelUserEnteredHowMany_addSpecials  = Label(rightFrame, text='3', fg='grey')
-LabelUserEnteredHowMany_addSpecials.grid(row=12, column=3, padx=2, pady=2, sticky=W)
+LabelUserEnteredHowMany_addSpecials.grid(row=12, column=4, padx=2, pady=2, sticky=W)
 
 LabelUse = Label(rightFrame, text='Use:')
-LabelUse.grid(row=13, column=0, padx=55, pady=2, sticky=W)
+LabelUse.grid(row=13, column=0, padx=55, pady=2, sticky=W, columnspan=4)
 
 addSpecialsCHOICES = [
     ("numseq", "numbers"),
@@ -215,7 +215,7 @@ i=14
 for variableName, description in addSpecialsCHOICES:
     variableName = IntVar()
     cb = Checkbutton(rightFrame, text=description, variable=variableName, anchor=W)
-    cb.grid(row=i, column=0, sticky=W, padx=(60))
+    cb.grid(row=i, column=0, sticky=W, padx=(60), columnspan=4)
     i += 1
 
 # INSIDE THE LOWER FRAME lowerFrame
