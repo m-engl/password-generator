@@ -60,8 +60,8 @@ HelpButton.grid(row=0, column=4, padx=5, pady=5)
 ChooseRandom = Radiobutton(leftFrameUpper, text="Generate random password", variable=MainMenu, value=1)
 ChooseRandom.grid(row=0, column=0, padx=5, pady=5, sticky=W, columnspan=4)
 
-EmptyField1 = Label(leftFrameUpper, text="", width=5)
-EmptyField1.grid(column=0)
+EmptyField1 = Label(leftFrameUpper, text="", width=10)
+EmptyField1.grid(column=0, row=1)
 
 LabelEnterLength = Label(leftFrameUpper, text="Enter length: ")
 LabelEnterLength.grid(row=1, column=1, sticky=W)
@@ -72,22 +72,19 @@ FieldEnterLength.grid(row=1, column=2, padx=2, pady=2)
 EnterLengthOKButton = Button(leftFrameUpper, text="OK", height=1, width = 4)
 EnterLengthOKButton.grid(row=1, column=3, padx=2, pady=2, sticky=W)
 
-LabelUserEnteredLength = Label(leftFrameUpper, text='12', fg='grey')
+LabelUserEnteredLength = LabelUserEnteredLength = Label(leftFrameUpper, text='12', fg='grey')
 LabelUserEnteredLength.grid(row=1, column=4, padx=2, pady=2, sticky=W)
 
-
+LabelChooseStrength = LabelUserEnteredLength = Label(leftFrameUpper, text='Choose strength:')
+LabelChooseStrength.grid(row=2, column=1, padx=2, pady=2, sticky=W)
 
 ChooseWeak = Radiobutton(leftFrameUpper, text="Weak", variable=ChooseStrength, value=1)
 ChooseMedium = Radiobutton(leftFrameUpper, text="Medium", variable=ChooseStrength, value=2)
 ChooseStrong = Radiobutton(leftFrameUpper, text="Strong", variable=ChooseStrength, value=3)
 
-ChooseWeak.grid(row=2, column=1, sticky=W, columnspan=4)
-ChooseMedium.grid(row=3, column=1, sticky=W, columnspan=4)
-ChooseStrong.grid(row=4, column=1, sticky=W, columnspan=4)
-
-
-
-
+ChooseWeak.grid(row=3, column=1, sticky=W, columnspan=4)
+ChooseMedium.grid(row=4, column=1, sticky=W, columnspan=4)
+ChooseStrong.grid(row=5, column=1, sticky=W, columnspan=4)
 
 # INSIDE THE LEFT LOWER FRAME leftFrameLower
 # GENERATE PASSWORD WITH WORD SEQUENCE
@@ -109,14 +106,77 @@ EnterSequenceOKButton.grid(row=2, column=2, padx=2, pady=2, sticky=W)
 LabelUserEnteredSequence = Label(leftFrameLower, text='cat wants food', fg='grey')
 LabelUserEnteredSequence.grid(row=4, column=1, padx=2, pady=2, sticky=W)
 
+LabelMenuSequence = Label(leftFrameLower, text='Use:')
+LabelMenuSequence.grid(row=5, column=1, padx=2, pady=2, sticky=W)
+
+
+seqCHOICES = [
+    ("numseq", "numbers"),
+    ("specseq", "special characters"),
+    ("mixseq", "mixed case")
+]
+
+i=6
+for variableName, description in seqCHOICES:
+    variableName = IntVar()
+    cb = Checkbutton(leftFrameLower, text=description, variable=variableName)
+    cb.grid(row=i, column=1, sticky=W, columnspan=4)
+    i += 1
+
 
 # INSIDE THE RIGHT FRAME rightFrame
 # CUSTOM WORD
 ChooseCustomWord = Radiobutton(rightFrame, text="\"Crazy word\" password: \nenter your word and change it!", variable=MainMenu, value=3)
-ChooseCustomWord.grid(row=0, column=0, padx=5, pady=5, sticky=W)
+ChooseCustomWord.grid(row=0, column=0, padx=5, pady=5, sticky=W, columnspan=4)
+
+customWordMODES = [
+    (1, "Mix case randomly"),
+    (2, "Change all the letters to look-alike\nnumbers and special characters"),
+    (3, """Mix case and change a chosen number
+        of letters to special characters and/or numbers"""),
+    (4, """Add a chosen number of special characters and/or
+     numbers in between the word's letters""")
+
+]
+
+customWordChoice = IntVar()
+customWordChoice.set(1)
+
+i = 3
+for mode, description in customWordMODES:
+    if mode == 4:
+        i = 10
+        r = Radiobutton(rightFrame, text=description, variable=customWordChoice, value=mode)
+        r.grid(row=i, column=1, padx=2, pady=2, sticky=W, columnspan=4)
+    elif mode in range(1,4):
+        r = Radiobutton(rightFrame, text=description, variable=customWordChoice, value=mode)
+        r.grid(row=i, column=1, padx=2, pady=2, sticky=W, columnspan=4)
+        i += 1
+
+LabelEnterHowMany = Label(rightFrame, text="Enter how many letters you want to\n have changed to \"look-alikes\": ")
+LabelEnterHowMany.grid(row=6, column=2, sticky=W)
+
+FieldEnterHowMany = Text(rightFrame, height=1, width = 3)
+FieldEnterHowMany.grid(row=6, column=3, padx=2, pady=2)
+
+EnterHowManyOKButton = Button(rightFrame, text="OK", height=1, width = 4)
+EnterHowManyOKButton.grid(row=6, column=4, padx=2, pady=2, sticky=W)
+
+LabelUserEnteredHowMany = LabelUserEnteredLength = Label(rightFrame, text='2', fg='grey')
+LabelUserEnteredHowMany.grid(row=6, column=5, padx=2, pady=2, sticky=W)
 
 
+wordCHOICES = [
+    ("numword", "numbers"),
+    ("specword", "special characters")
+]
 
+i=7
+for variableName, description in wordCHOICES:
+    variableName = IntVar()
+    cb = Checkbutton(rightFrame, text=description, variable=variableName)
+    cb.grid(row=i, column=2, sticky=W)
+    i += 1
 
 # INSIDE THE LOWER FRAME lowerFrame
 # credits
