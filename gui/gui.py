@@ -23,8 +23,8 @@ leftFrameLower.grid(row=2, column=0, sticky='NSEW')
 rightFrame.grid(row=1, column=1, rowspan = 2, sticky='NSEW')
 lowerFrame.grid(row=3, column=0, columnspan=2, sticky='WESN')
 
-# INSIDE THE UPPER FRAME upperFrame
 
+# INSIDE THE UPPER FRAME upperFrame
 
 logo = PhotoImage(file="logo.gif")
 Logo = Label(upperFrame, image=logo)
