@@ -20,6 +20,8 @@ seqCHOICES = [
     ("mixseq", "mixed case")
 ]
 
+addSpecialsCHOICES = seqCHOICES
+
 customWordChoice = tk.IntVar()
 customWordChoice.set(1)
 customWordMODES = [
@@ -43,24 +45,23 @@ class Upper_Frame(tk.Frame):
 
         self.TextBegin = tk.Label(self, text="Before generating the password, choose your options below.")
         self.TextBegin.grid(row=4, column=0, columnspan=5,
-                            padx=10, pady=5,
+                            padx=10, pady=2,
                             sticky='W')
 
         self.GenPassButton = tk.Button(self, text="Generate\nPassword")
-        self.GenPassButton.grid(row=1, column=1,
+        self.GenPassButton.grid(row=2, column=1, rowspan=2,
                                 padx=5, pady=5)
 
         self.YourNewPasswordIs = tk.Label(self, text="Your new password is:")
-        self.YourNewPasswordIs.grid(row=0, column=2,
-                                    padx=5, pady=1,
-                                    sticky='W')
+        self.YourNewPasswordIs.grid(row=1, column=2,
+                                    padx=5, pady=(5,1),
+                                    sticky='S')
 
         self.ThePassword = tk.Text(self, height=1, width=35, bg="light goldenrod")  # , relief="solid", borderwidth=1
-        self.ThePassword.grid(row=1, column=2
-                              )
+        self.ThePassword.grid(row=2, column=2, rowspan=2)
 
         self.CopyButton = tk.Button(self, text="Copy")
-        self.CopyButton.grid(row=2, column=2,
+        self.CopyButton.grid(row=2, column=3, rowspan=2,
                              padx=5, pady=1)
 
 
@@ -179,7 +180,7 @@ class Right_Frame(tk.Frame):
                                  sticky='W')
 
         self.FieldEnterWord = tk.Text(self,
-                                   height=1, width=15,
+                                   height=1, width=20,
                                    bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterWord.grid(row=1, column=1,  columnspan=2,
                                  padx=(5, 2),
@@ -202,15 +203,49 @@ class Right_Frame(tk.Frame):
                                 padx=(25, 5), pady=(5),
                                 sticky='W')
 
-        self.create_radios_custom_word(4)
+        self.create_radios_custom_word(4) # begin_with_row_number
 
+        self.LabelEnterHowMany_mixChange = tk.Label(self,
+            text="Enter how many letters you want\nto have changed to \"look-alikes\": ",
+            justify="left")
+        self.LabelEnterHowMany_mixChange.grid(row=7, column=0, columnspan=2,
+                                         padx=(45, 5),
+                                         sticky='W')
+
+        self.FieldEnterHowMany_mixChange = tk.Text(self, height=1, width=3,
+                                                   bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterHowMany_mixChange.grid(row=7, column=2,
+                                              padx=5, pady=2)
+
+        self.EnterHowManyOKButton_mixChange = tk.Button(self, text="OK",
+                                                        height=1, width=4)
+        self.EnterHowManyOKButton_mixChange.grid(row=7, column=3,
+                                                 padx=2, pady=2,
+                                                 sticky='W')
+
+        self.LabelUserEnteredHowMany_mixChange = tk.Label(self, text='2', fg='grey')
+        self.LabelUserEnteredHowMany_mixChange.grid(row=7, column=4,
+                                                    padx=2, pady=2,
+                                                    sticky='W')
+
+        self.LabelUse = tk.Label(self, text='Use:')
+        self.LabelUse.grid(row=13, column=0, columnspan=4,
+                           padx=55, pady=2,
+                           sticky='W')
+
+        self.create_checkboxes_custom_word(14) # begin_with_row_number
+
+
+
+
+    # FUNCTIONS:
     def create_radios_custom_word(self, begin_with_row_number):
 
         def create_radios_cword():
             self.rb = tk.Radiobutton(self, text=description,
                                      variable=customWordChoice, value=mode,
                                      justify="left")
-            self.rb.grid(row=self.i, column=0, columnspan=3,
+            self.rb.grid(row=self.i, column=0, columnspan=5,
                          padx=(25, 25), pady=2,
                          sticky='W')
             return self.rb
@@ -226,9 +261,17 @@ class Right_Frame(tk.Frame):
                 create_radios_cword()
                 self.i += 1
 
-
-
-
+    def create_checkboxes_custom_word(self, begin_with_row_number):
+        self.i = begin_with_row_number
+        for variableName, description in addSpecialsCHOICES:
+            variableName = tk.IntVar()
+            self.cb = tk.Checkbutton(self, text=description,
+                                     variable=variableName,
+                                     anchor='w')
+            self.cb.grid(row=self.i, column=0, columnspan=4,
+                         padx=60,
+                         sticky='W')
+            self.i += 1
 
 
 class Lower_Frame(tk.Frame):
