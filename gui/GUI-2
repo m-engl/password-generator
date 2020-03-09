@@ -4,9 +4,11 @@ root = tk.Tk()
 # VARIABLES
 theTitle = "My ULTIMATE (PASS)WORD Generator"
 logo = tk.PhotoImage(file="logo.gif")
+
 MainMenu = tk.IntVar()
 
 ChooseStrength = tk.IntVar()
+
 strengthMODES = [
     (1, "Weak"),
     (2, "Medium"),
@@ -24,6 +26,7 @@ addSpecialsCHOICES = seqCHOICES
 
 customWordChoice = tk.IntVar()
 customWordChoice.set(1)
+
 customWordMODES = [
     (1, "Mix case randomly"),
     (2, "Change all the letters to look-alike\nnumbers and special characters"),
@@ -31,7 +34,7 @@ customWordMODES = [
     (4, "Add a chosen number of special characters and/or\nnumbers in between the word's letters")
 ]
 
-
+# CLASSES - fRAMES (for the main frames) that are to be put together in the Main_Application
 
 class Upper_Frame(tk.Frame):
 
@@ -279,12 +282,27 @@ class Lower_Frame(tk.Frame):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
 
+        self.author = tk.Label(self,
+                            text="Author: M.E. \nAll rights reserverd. \nSuggestions? Contact me(hyperlink)")
+        self.author.grid(column=0, row=0,
+                         padx=80, pady=5,
+                         sticky='E'
+                         )
+
+        self.HelpButton = tk.Button(self, text="HELP",
+                                 width=4, height=1)
+        self.HelpButton.grid(column=1, row=0,
+                             padx=(60, 5),
+                             sticky='E')
+
+
+# MAIN APP-CLASS
 
 class Main_Application(tk.Frame):
     def __init__(self, master, *args, **kwargs):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
-        master.title = theTitle
+        master.title(theTitle)
 
         # FRAMES
         upperFrame = Upper_Frame(root, highlightbackground="black", highlightthickness=1)
@@ -293,17 +311,13 @@ class Main_Application(tk.Frame):
         rightFrame = Right_Frame(root, highlightbackground="black", highlightthickness=1)  #
         lowerFrame = Lower_Frame(root, highlightbackground="black", highlightthickness=1)
 
-
         # LAYOUT
-        upperFrame.grid(row=0, column=0, columnspan=2, sticky='WESN')
-        # upperFrame.grid_propagate(False) # used to never resize the frame
-        leftFrameUpper.grid(row=1, column=0, sticky='NSEW')
-        leftFrameLower.grid(row=2, column=0, sticky='NSEW')
-        rightFrame.grid(row=1, column=1, rowspan=2, sticky='NSEW')
-        lowerFrame.grid(row=3, column=0, columnspan=2, sticky='WESN')
-
-
-
+        upperFrame.grid(row=0, column=0, columnspan=2, sticky='NESW')
+        # upperFrame.grid_propagate(False) # used to never resize the frame if it g
+        leftFrameUpper.grid(row=1, column=0, sticky='NESW')
+        leftFrameLower.grid(row=2, column=0, sticky='NESW')
+        rightFrame.grid(row=1, column=1, rowspan=2, sticky='NESW')
+        lowerFrame.grid(row=3, column=0, columnspan=2, sticky='NESW')
 
 
 
