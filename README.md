@@ -3,7 +3,7 @@
 ## changes:
 
 2020-03-09 GUI code optimized
-* re-coded in OOP
+* re-coded in OOP (GUI-2.py)
 * code more translarent
 * ready for connecting
 * planning to add custom colours possibility, maybe
