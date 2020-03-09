@@ -2,6 +2,12 @@
 
 ## changes:
 
+2020-03-09 GUI code optimized
+* re-coded in OOP
+* code more translarent
+* ready for connecting
+* planning to add custom colours possibility, maybe
+
 2020-03-08 GUI ready for optimization and connection
 * basic design ready for grid optimization
 
