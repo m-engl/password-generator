@@ -7,6 +7,7 @@ import charSet as cs
 #=====================CHOICES======================
 #==================================================
 
+
 MainMenu = IntEnum(
     'MainMenu',
         {
@@ -62,12 +63,11 @@ class Random_Password:
         self.password = ''.join(random.choice(self.chosenSet) for _ in range(self.length))
         return self.password
 
+class Sequence_Based_Password:
+    pass
 
-
-
-
-
-
+class Custom_Word_Password:
+    pass
 
 
 # TESTING
