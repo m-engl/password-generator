@@ -3,9 +3,13 @@ root = tk.Tk()
 
 # VARIABLES
 theTitle = "My ULTIMATE (PASS)WORD Generator"
-logo = tk.PhotoImage(file="logo/logo.gif")
+logo = tk.PhotoImage(file="img/logo.gif")
 
 MainMenu = tk.IntVar()
+# Main Menu:
+# random password 1
+# word sequence based 2
+# custom word/crazy word based 3
 
 ChooseStrength = tk.IntVar()
 
@@ -75,7 +79,9 @@ class Left_Frame_UP(tk.Frame):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
 
-        self.ChooseRandom = tk.Radiobutton(self, text="Generate random password", variable=MainMenu, value=1)
+        self.ChooseRandom = tk.Radiobutton(self, text="Generate random password",
+                                           variable=MainMenu, value=1,
+                                           command=self.master.activate_chosen_frame)
         self.ChooseRandom.grid(row=0, column=0, columnspan=4,
                                padx=5, pady=5,
                                sticky='W') #
@@ -123,7 +129,8 @@ class Left_Frame_LOW(tk.Frame):
         self.master = master
 
         self.ChooseWordSequence = tk.Radiobutton(self, text="Word sequence-based password",
-                                                 variable=MainMenu, value = 2)
+                                            variable=MainMenu, value=2,
+                                           command=self.master.activate_chosen_frame)
         self.ChooseWordSequence.grid(row=0, column=0, columnspan=3,
                                 padx=5, pady=5,
                                 sticky='W')
@@ -171,7 +178,8 @@ class Right_Frame(tk.Frame):
 
         self.ChooseCustomWord = tk.Radiobutton(self, text="\"Crazy word\" password",
                                        variable=MainMenu, value=3,
-                                       justify="left")
+                                       justify="left",
+                                           command=self.master.activate_chosen_frame)
         self.ChooseCustomWord.grid(row=0, column=0, columnspan=5,
                                   padx=(0, 5),
                                    sticky='W')
@@ -242,7 +250,7 @@ class Right_Frame(tk.Frame):
 
 
 
-    # FUNCTIONS:
+    # METHODS:
     def create_radios_custom_word(self, begin_with_row_number):
 
         def create_radios_cword():
@@ -305,11 +313,11 @@ class Main_Application(tk.Frame):
         master.title(theTitle)
 
         # FRAMES
-        self.upperFrame = Upper_Frame(root, highlightbackground="black", highlightthickness=1)
-        self.leftFrameUpper = Left_Frame_UP(root, highlightbackground="black", highlightthickness=1)  #
-        self.leftFrameLower = Left_Frame_LOW(root, highlightbackground="black", highlightthickness=1)  #
-        self.rightFrame = Right_Frame(root, highlightbackground="black", highlightthickness=1)  #
-        self.lowerFrame = Lower_Frame(root, highlightbackground="black", highlightthickness=1)
+        self.upperFrame = Upper_Frame(self, highlightbackground="black", highlightthickness=1)
+        self.leftFrameUpper = Left_Frame_UP(self, highlightbackground="black", highlightthickness=1)  #
+        self.leftFrameLower = Left_Frame_LOW(self, highlightbackground="black", highlightthickness=1)  #
+        self.rightFrame = Right_Frame(self, highlightbackground="black", highlightthickness=1)  #
+        self.lowerFrame = Lower_Frame(self, highlightbackground="black", highlightthickness=1)
 
         # LAYOUT
         self.upperFrame.grid(row=0, column=0, columnspan=2, sticky='NESW')
@@ -320,18 +328,84 @@ class Main_Application(tk.Frame):
         self.lowerFrame.grid(row=3, column=0, columnspan=2, sticky='NESW')
 
 
+    # GUI METHODS
+    # def disable_nonchosen_frames(self):
+    #
+    #     self.framesToDisable = ()
+    #
+    #     self.frames = (
+    #         self.leftFrameUpper, # MainMenu = 1, index 0
+    #         self.leftFrameLower, # MainMenu = 2, index 1
+    #         self.rightFrame # MainMenu = 3, index 2
+    #     )
+    #
+    #     self.mainMenuButtons = (
+    #         self.leftFrameUpper.ChooseRandom, # MainMenu = 1, index 0
+    #         self.leftFrameLower.ChooseWordSequence, # MainMenu = 2, index 1
+    #         self.rightFrame.ChooseCustomWord # MainMenu = 3, index 2
+    #                             )
+    #
+    #     if MainMenu.get() == 1:
+    #         self.framesToDisable = (self.frames[1], self.frames[2])
+    #
+    #     elif MainMenu.get() == 2:
+    #         self.framesToDisable = (self.frames[0], self.frames[2])
+    #
+    #     elif MainMenu.get() == 3:
+    #         self.framesToDisable = (self.frames[0], self.frames[1])
+    #
+    #     for frame in self.framesToDisable:
+    #         for child in frame.winfo_children():
+    #             if child not in self.mainMenuButtons:
+    #                 child.config(state='disabled')
+
+    def activate_chosen_frame(self):
+
+        self.frames = (
+            self.leftFrameUpper, # MainMenu = 1, index 0
+            self.leftFrameLower, # MainMenu = 2, index 1
+            self.rightFrame # MainMenu = 3, index 2
+        )
+
+        self.mainMenuButtons = (
+            self.leftFrameUpper.ChooseRandom, # MainMenu = 1, index 0
+            self.leftFrameLower.ChooseWordSequence, # MainMenu = 2, index 1
+            self.rightFrame.ChooseCustomWord # MainMenu = 3, index 2
+                                )
+
+        for frame in self.frames:
+            for child in frame.winfo_children():
+                if child not in self.mainMenuButtons:
+                    child.config(state="disabled")
+
+        self.frameToEnable = self.frames[0]
+
+        if MainMenu.get() == 1:
+            self.frameToEnable = self.frames[0]
+
+        elif MainMenu.get() == 2:
+            self.frameToEnable = self.frames[1]
+
+        elif MainMenu.get() == 3:
+            self.frameToEnable = self.frames[2]
+
+        for child in self.frameToEnable.winfo_children():
+            child.config(state='normal')
+            print(child)
+
+
+
+
+
 
 # COME TO LIFE
 
 main = Main_Application(root)
 main.grid(column = 0, row = 0, padx = 10, pady = 10)
 
-def deactivate_other_options(frame):
-    for child in frame.winfo_children():
-        if child != frame.ChooseRandom:
-            child.config(state='disabled')
 
-deactivate_other_options(main.leftFrameUpper)
+
+
 
 
 # main loop
