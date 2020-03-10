@@ -3,7 +3,7 @@ root = tk.Tk()
 
 # VARIABLES
 theTitle = "My ULTIMATE (PASS)WORD Generator"
-logo = tk.PhotoImage(file="logo.gif")
+logo = tk.PhotoImage(file="logo/logo.gif")
 
 MainMenu = tk.IntVar()
 
