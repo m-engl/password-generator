@@ -44,7 +44,8 @@ class Left_Frame_UP(tk.Frame):
     def create_radios_strength(self, begin_with_row_number):
         self.i = begin_with_row_number
         for choice, description in self.master.strengthMODES:
-            self.rb = tk.Radiobutton(self, text = description, variable = self.master.ChooseStrength, value = choice)
+            self.rb = tk.Radiobutton(self, text = description, variable = self.master.ChooseStrength, value = choice,
+                                     command=lambda: print(variable, value))
             self.rb.grid(row = self.i, column=1, columnspan=4,
                          padx = (25, 5),
                          sticky='W')

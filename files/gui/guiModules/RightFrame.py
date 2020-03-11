@@ -20,15 +20,14 @@ class Right_Frame(tk.Frame):
                                  padx=(20, 5), pady=(5),
                                  sticky='W')
 
-        self.FieldEnterWord = tk.Text(self,
-                                   height=1, width=20,
-                                   bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterWord = tk.Entry(self, width=20, bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterWord.grid(row=1, column=1,  columnspan=2,
                                  padx=(5, 2),
                                  sticky='W')
 
         self.EnterWordOKButton = tk.Button(self, text="OK",
-                                        height=1, width=4)
+                                           height=1, width=4,
+                                           command=self.master.get_word)
         self.EnterWordOKButton.grid(row=1, column=3,
                                     padx=(2, 2),
                                     sticky='W')

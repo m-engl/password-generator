@@ -58,7 +58,9 @@ class Main_Application(tk.Frame):
         self.customWordMODES = customWordMODES
         self.length = tk.IntVar()
         self.strength = tk.IntVar()
+        self.sequence = tk.StringVar()
         self.password = tk.StringVar()
+        self.word = tk.StringVar()
 
         # FRAMES
         self.upperFrame = Upper_Frame.Upper_Frame(self, highlightbackground="black", highlightthickness=1)
@@ -73,6 +75,8 @@ class Main_Application(tk.Frame):
         self.leftFrameLower.grid(row=2, column=0, sticky='NESW')
         self.rightFrame.grid(row=1, column=1, rowspan=2, sticky='NESW')
         self.lowerFrame.grid(row=3, column=0, columnspan=2, sticky='NESW')
+
+        self.get_seq_choices()
 
     # GUI METHODS
     def activate_chosen_frame(self):
@@ -109,7 +113,11 @@ class Main_Application(tk.Frame):
             child.config(state='normal')
             print(child)
 
+    def activate_widget_group(self):
+        pass
+
     # PROGRAM METHODS
+    # RANDOM PASSWORD GENERATING
     def get_length(self):
         self.length = self.leftFrameUpper.FieldEnterLength.get()
         self.leftFrameUpper.LabelUserEnteredLength.config(text = str(self.length))
@@ -120,25 +128,64 @@ class Main_Application(tk.Frame):
         return self.strength
 
     def generate_random_password(self):
-        self.strength = self.get_strength
+        length = int(self.get_length())
+        strength = self.get_strength()
         self.chosenSet = cs.mediumSet
 
-        if self.strength == 1:
+        if strength == 1:
             self.chosenSet = cs.weakSet
-        elif self.strength == 2:
+        elif strength == 2:
             self.chosenSet = cs.mediumSet
-        elif self.strength == 3:
+        elif strength == 3:
             self.chosenSet = cs.strongSet
-        elif self.strength == 4:
+        elif strength == 4:
             pass
 
-        self.password = ''.join(random.choice(self.chosenSet) for _ in range(self.length.get()))
+        self.password = ''.join(random.choice(self.chosenSet) for _ in range(length))
         return self.password
 
+    # SEQUENCE BASED-PWD GENERATING
+    def get_sequence(self):
+        self.sequence = self.leftFrameLower.FieldEnterSequence.get()
+        self.leftFrameLower.LabelUserEnteredSequence.config(text = str(self.sequence))
+        return self.sequence
+
+    def get_seq_choices(self):
+        # print(self.leftFrameLower.numseq.get())
+        pass
+
+
+    def generate_sequence_based_password(self):
+
+        sequence = self.get_sequence()
+
+        def spaces_to_specials(sign):
+            if sign == " ":
+                sign = random.choice(cs.specialChars)
+                return sign
+            else:
+                return sign
+
+        specialSequence = ''.join(spaces_to_specials(sign) for sign in sequence)  # cat]wants$food-badly
+        specialSequenceMixed = ''.join(cw.randomize_case(sign) for sign in specialSequence)  # cat]wANTS$fOod-BadlY
+        mixedSequence = ''.join(cw.randomize_case(sign) for sign in sequence)  # CAtwantsfOoDBAdlY
+
+        self.password = specialSequence
+
+    # WORD-BASED PWD
+
+    def get_word(self):
+        self.word = self.rightFrame.FieldEnterWord.get()
+        self.rightFrame.LabelUserEnteredWord.config(text = str(self.word))
+        return self.word
+
+    # GENERAL:
     def display_password(self):
+
         self.password = self.generate_random_password()
-        print(self.length, self.strength)
-        self.upperFrame.ThePassword.config(textvariable=self.password)
+
+        self.upperFrame.ThePassword.delete(0,'end')
+        self.upperFrame.ThePassword.insert(0,self.password)
 
 
 
@@ -147,11 +194,4 @@ class Main_Application(tk.Frame):
 
 main = Main_Application(root)
 main.grid(column = 0, row = 0, padx = 10, pady = 10)
-
-
-
-
-
-
-# main loop
 tk.mainloop()

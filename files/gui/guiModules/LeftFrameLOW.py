@@ -18,11 +18,12 @@ class Left_Frame_LOW(tk.Frame):
                                          padx=(20, 5), pady=(5),
                                          sticky='W')
 
-        self.FieldEnterSequence = tk.Text(self, height=1, width=28, bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterSequence = tk.Entry(self, width=28, bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterSequence.grid(row=2, column=0, columnspan=3,
                                      padx=(20, 5))
 
-        self.EnterSequenceOKButton = tk.Button(self, text="OK", height = 1, width = 4)
+        self.EnterSequenceOKButton = tk.Button(self, text="OK", height = 1, width = 4,
+                                        command=self.master.get_sequence)
         self.EnterSequenceOKButton.grid(row=3, column=1, columnspan = 3,
                                         padx=(20, 30),
                                         sticky='W')
@@ -42,7 +43,6 @@ class Left_Frame_LOW(tk.Frame):
     def create_checkboxes_sequence(self, begin_with_row_number):
         self.i = begin_with_row_number
         for variableName, description in self.master.seqCHOICES:
-            variableName = tk.IntVar()
             self.cb = tk.Checkbutton(self, text=description, variable=variableName)
             self.cb.grid(row=self.i, column=1, columnspan=4,
                          sticky='W')
