@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6371004-4389-46ce-9184-ce99aaaed041" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files/gui/guiModules/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/gui/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/gui.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/gui/guiModules/LeftFrameLOW.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/guiModules/LeftFrameLOW.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/guiModules/LeftFrameUP.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/guiModules/LeftFrameUP.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/gui/guiModules/RightFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/guiModules/RightFrame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/guiModules/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/guiModules/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +45,7 @@
       <recent name="C:\Users\M\Documents\GitHub\password-generator\gui\logo" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test">
+  <component name="RunManager" selected="Python.gui (1)">
     <configuration name="LeftFrameLOW" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="password-generator" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -153,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test" />
         <item itemvalue="Python.gui (1)" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.LeftFrameLOW" />
         <item itemvalue="Python.sequence" />
         <item itemvalue="Python.gui" />
@@ -203,22 +203,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583760581967" />
-    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1583939060223">
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1583963658606">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583939060223" />
-    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1583939060223">
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583963658606" />
+    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1583963658606">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583939060223" />
-    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1583939060223">
+    <state width="1344" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1583963658606" />
+    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1583963658605">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583939060223" />
-    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1583939060223">
+    <state width="1344" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1583963658605" />
+    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1583963658606">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583939060223" />
+    <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1583963658606" />
     <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1583937202102">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -235,10 +235,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1344" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1583937202102" />
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1583922969289">
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1583961405402">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583922969289" />
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1583961405402" />
     <state x="202" y="180" width="1010" height="441" key="dock-window-1" timestamp="1583760633058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

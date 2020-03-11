@@ -38,12 +38,31 @@ class Left_Frame_LOW(tk.Frame):
                                padx=(25, 5), pady=(5),
                                sticky='W')
 
-        self.create_checkboxes_sequence(6) # arg: begin_with_row_number
+        # Checkboxes
 
-    def create_checkboxes_sequence(self, begin_with_row_number):
-        self.i = begin_with_row_number
-        for variableName, description in self.master.seqCHOICES:
-            self.cb = tk.Checkbutton(self, text=description, variable=variableName)
-            self.cb.grid(row=self.i, column=1, columnspan=4,
-                         sticky='W')
-            self.i += 1
+        self.num = tk.IntVar()
+        self.spec = tk.IntVar()
+        self.mix = tk.IntVar()
+
+        self.checkNumbers = tk.Checkbutton(self, text=self.master.seqCHOICES[0], variable=self.num)
+        self.checkNumbers.grid(row=6, column=1, columnspan=4,
+                               sticky='W')
+
+        self.checkSpecials = tk.Checkbutton(self, text=self.master.seqCHOICES[1], variable=self.spec)
+        self.checkSpecials.grid(row=7, column=1, columnspan=4,
+                                sticky='W')
+
+        self.checkMixed = tk.Checkbutton(self, text=self.master.seqCHOICES[2], variable=self.mix)
+        self.checkMixed.grid(row=8, column=1, columnspan=4,
+                             sticky='W')
+
+
+        # self.create_checkboxes_sequence(6) # arg: begin_with_row_number
+
+    # def create_checkboxes_sequence(self, begin_with_row_number):
+    #     self.i = begin_with_row_number
+    #     for variableName, description in self.master.seqCHOICES:
+    #         self.cb = tk.Checkbutton(self, text=description, variable=variableName)
+    #         self.cb.grid(row=self.i, column=1, columnspan=4,
+    #                      sticky='W')
+    #         self.i += 1

@@ -20,11 +20,7 @@ strengthMODES = [
     (4, "Superstrong")
 ]
 
-seqCHOICES = [
-    ("numseq", "numbers"),
-    ("specseq", "special characters"),
-    ("mixseq", "mixed case")
-]
+seqCHOICES = ["numbers", "special characters", "mixed case"]
 
 addSpecialsCHOICES = seqCHOICES
 
