@@ -5,6 +5,15 @@ class Left_Frame_UP(tk.Frame):
     def __init__(self, master, *args, **kwargs):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
+        self.length = int()
+        self.ChooseStrength = tk.IntVar()
+
+        self.strengthMODES = [
+                (1, "Weak"),
+                (2, "Medium"),
+                (3, "Strong"),
+                (4, "Superstrong")
+         ]
 
         self.ChooseRandom = tk.Radiobutton(self, text="Generate random password",
                                            variable=self.master.MainMenu, value=1,
@@ -24,7 +33,7 @@ class Left_Frame_UP(tk.Frame):
 
         self.EnterLengthOKButton = tk.Button(self, text="OK",
                                              height=1, width=4,
-                                             command=self.master.get_length)
+                                             command=self.get_length)
         self.EnterLengthOKButton.grid(row=1, column=3,
                                       padx=2, pady=2,
                                       sticky='W')
@@ -43,10 +52,18 @@ class Left_Frame_UP(tk.Frame):
 
     def create_radios_strength(self, begin_with_row_number):
         self.i = begin_with_row_number
-        for choice, description in self.master.strengthMODES:
-            self.rb = tk.Radiobutton(self, text = description, variable = self.master.ChooseStrength, value = choice,
-                                     command=lambda: print(variable, value))
+        for choice, description in self.strengthMODES:
+            self.rb = tk.Radiobutton(self, text = description, variable = self.ChooseStrength, value = choice)
             self.rb.grid(row = self.i, column=1, columnspan=4,
                          padx = (25, 5),
                          sticky='W')
             self.i += 1
+
+    def get_length(self):
+        self.length = self.FieldEnterLength.get()
+        self.LabelUserEnteredLength.config(text = str(self.length))
+        return self.length
+
+    def get_strength(self):
+        self.strength = self.ChooseStrength.get() # 1, 2, 3 or 4
+        return self.strength
