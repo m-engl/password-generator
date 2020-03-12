@@ -45,6 +45,8 @@ class Sequence_Based_Generator:
             elif randomChoice == 'c' :
                 sign = random.choice(cs.numbers) + random.choice(cs.specialChars)
                 return sign
+        else:
+            return sign
 
 
 

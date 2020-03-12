@@ -14,8 +14,6 @@ root = tk.Tk()
 theTitle = "My ULTIMATE (PASS)WORD Generator"
 theLogo = "img/logo.gif"
 
-# addSpecialsCHOICES = seqCHOICES
-
 customWordMODES = [
     (1, "Mix case randomly"),
     (2, "Change all the letters to look-alike\nnumbers and special characters"),

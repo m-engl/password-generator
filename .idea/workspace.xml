@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6371004-4389-46ce-9184-ce99aaaed041" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/files/gui/archive/deleted from modules" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/gui/guiModules/wordAndSeqStuff.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/gui/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/guiModules/LeftFrameLOW.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/guiModules/LeftFrameLOW.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/guiModules/RightFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/guiModules/RightFrame.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/files/gui/guiModules/sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/guiModules/sequence.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sequence" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sequence (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="password-generator" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -120,11 +116,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui/guiModules" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/files/sequence.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/files/gui/guiModules/sequence.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -157,10 +153,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.gui (1)" />
+        <item itemvalue="Python.sequence (1)" />
         <item itemvalue="Python.randomPwdGenerator" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.LeftFrameLOW" />
-        <item itemvalue="Python.sequence" />
       </list>
     </recent_temporary>
   </component>
@@ -210,42 +206,42 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583760581967" />
-    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1584011810446">
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom" timestamp="1584025481258">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584011810446" />
-    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1584011810446">
+    <state width="1344" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584025481258" />
+    <state width="1344" height="174" key="GridCell.Tab.0.center" timestamp="1584025481258">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584011810446" />
-    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1584011810446">
+    <state width="1344" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584025481258" />
+    <state width="1344" height="174" key="GridCell.Tab.0.left" timestamp="1584025481257">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584011810446" />
-    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1584011810446">
+    <state width="1344" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584025481257" />
+    <state width="1344" height="174" key="GridCell.Tab.0.right" timestamp="1584025481258">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584011810446" />
-    <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1583937202102">
+    <state width="1344" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584025481258" />
+    <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1584025154416">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1583937202102" />
-    <state width="1344" height="217" key="GridCell.Tab.1.center" timestamp="1583937202102">
+    <state width="1344" height="217" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584025154416" />
+    <state width="1344" height="217" key="GridCell.Tab.1.center" timestamp="1584025154415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1583937202102" />
-    <state width="1344" height="217" key="GridCell.Tab.1.left" timestamp="1583937202102">
+    <state width="1344" height="217" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584025154415" />
+    <state width="1344" height="217" key="GridCell.Tab.1.left" timestamp="1584025154415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1583937202102" />
-    <state width="1344" height="217" key="GridCell.Tab.1.right" timestamp="1583937202102">
+    <state width="1344" height="217" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584025154415" />
+    <state width="1344" height="217" key="GridCell.Tab.1.right" timestamp="1584025154415">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1583937202102" />
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584005033215">
+    <state width="1344" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584025154415" />
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584020040032">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584005033215" />
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584020040032" />
     <state x="202" y="180" width="1010" height="441" key="dock-window-1" timestamp="1583760633058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
