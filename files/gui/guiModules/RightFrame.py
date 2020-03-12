@@ -5,6 +5,8 @@ class Right_Frame(tk.Frame):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
 
+        self.addChars = ["numbers", "special characters", "mixed case"]
+
         self.ChooseCustomWord = tk.Radiobutton(self, text="\"Crazy word\" password",
                                        variable=self.master.MainMenu, value=3,
                                        justify="left",
@@ -79,23 +81,23 @@ class Right_Frame(tk.Frame):
         self.spec = tk.IntVar()
         self.mix = tk.IntVar()
 
-        self.checkNumbers = tk.Checkbutton(self, text=self.master.seqCHOICES[0], variable=self.num)
+        self.checkNumbers = tk.Checkbutton(self, text=self.addChars[0], variable=self.num)
         self.checkNumbers.grid(row=14, column=0, columnspan=4,
                                  padx=60,
                                  sticky='W')
 
-        self.checkSpecials = tk.Checkbutton(self, text=self.master.seqCHOICES[1], variable=self.spec)
+        self.checkSpecials = tk.Checkbutton(self, text=self.addChars[1], variable=self.spec)
         self.checkSpecials.grid(row=15, column=0, columnspan=4,
                                  padx=60,
                                  sticky='W')
 
-        self.checkMixed = tk.Checkbutton(self, text=self.master.seqCHOICES[2], variable=self.mix)
+        self.checkMixed = tk.Checkbutton(self, text=self.addChars[2], variable=self.mix)
         self.checkMixed.grid(row=16, column=0, columnspan=4,
                              padx=60,
                              sticky='W')
 
 
-        # self.create_checkboxes_custom_word(14) # begin_with_row_number
+
 
 
     # METHODS:
@@ -126,14 +128,3 @@ class Right_Frame(tk.Frame):
         self.LabelUserEnteredWord.config(text=str(self.word))
         return self.word
 
-    # def create_checkboxes_custom_word(self, begin_with_row_number):
-    #     self.i = begin_with_row_number
-    #     for variableName, description in self.master.addSpecialsCHOICES:
-    #         variableName = tk.IntVar()
-    #         self.cb = tk.Checkbutton(self, text=description,
-    #                                  variable=variableName,
-    #                                  anchor='w')
-    #         self.cb.grid(row=self.i, column=0, columnspan=4,
-    #                      padx=60,
-    #                      sticky='W')
-    #         self.i += 1

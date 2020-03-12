@@ -6,6 +6,8 @@ class Left_Frame_LOW(tk.Frame):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
 
+        self.seqCHOICES = ["numbers", "special characters", "mixed case"]
+
         self.ChooseWordSequence = tk.Radiobutton(self, text="Word sequence-based password",
                                             variable=self.master.MainMenu, value=2,
                                            command=self.master.activate_chosen_frame)
@@ -44,19 +46,17 @@ class Left_Frame_LOW(tk.Frame):
         self.spec = tk.IntVar()
         self.mix = tk.IntVar()
 
-        self.checkNumbers = tk.Checkbutton(self, text=self.master.seqCHOICES[0], variable=self.num)
+        self.checkNumbers = tk.Checkbutton(self, text=self.seqCHOICES[0], variable=self.num)
         self.checkNumbers.grid(row=6, column=1, columnspan=4,
                                sticky='W')
 
-        self.checkSpecials = tk.Checkbutton(self, text=self.master.seqCHOICES[1], variable=self.spec)
+        self.checkSpecials = tk.Checkbutton(self, text=self.seqCHOICES[1], variable=self.spec)
         self.checkSpecials.grid(row=7, column=1, columnspan=4,
                                 sticky='W')
 
-        self.checkMixed = tk.Checkbutton(self, text=self.master.seqCHOICES[2], variable=self.mix)
+        self.checkMixed = tk.Checkbutton(self, text=self.seqCHOICES[2], variable=self.mix)
         self.checkMixed.grid(row=8, column=1, columnspan=4,
                              sticky='W')
-
-
 
     # METHODS
     def get_sequence(self):
@@ -64,12 +64,11 @@ class Left_Frame_LOW(tk.Frame):
         self.LabelUserEnteredSequence.config(text=str(self.sequence))
         return self.sequence
 
-        # self.create_checkboxes_sequence(6) # arg: begin_with_row_number
+    def get_values_for_seqCHOICES(self):
+        self.choices = list()
+        self.choices.append(self.num.get())
+        self.choices.append(self.spec.get())
+        self.choices.append(self.mix.get())
+        return self.choices
 
-    # def create_checkboxes_sequence(self, begin_with_row_number):
-    #     self.i = begin_with_row_number
-    #     for variableName, description in self.master.seqCHOICES:
-    #         self.cb = tk.Checkbutton(self, text=description, variable=variableName)
-    #         self.cb.grid(row=self.i, column=1, columnspan=4,
-    #                      sticky='W')
-    #         self.i += 1
+
