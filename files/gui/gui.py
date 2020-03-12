@@ -14,14 +14,6 @@ root = tk.Tk()
 theTitle = "My ULTIMATE (PASS)WORD Generator"
 theLogo = "img/logo.gif"
 
-customWordMODES = [
-    (1, "Mix case randomly"),
-    (2, "Change all the letters to look-alike\nnumbers and special characters"),
-    (3, "Mix case and change a chosen number \nof letters to special characters and/or numbers"),
-    (4, "Add a chosen number of special characters and/or\nnumbers in between the word's letters")
-]
-
-
 # Here comes the main application class
 
 class Main_Application(tk.Frame):
@@ -36,8 +28,8 @@ class Main_Application(tk.Frame):
         # random password 1
         # word sequence based 2
         # custom word/crazy word based 3
-        self.customWordChoice = tk.IntVar()
-        self.customWordMODES = customWordMODES
+        # self.customWordChoice = tk.IntVar()
+        # self.customWordMODES = customWordMODES
         self.sequence = tk.StringVar()
         self.password = tk.StringVar()
         self.word = tk.StringVar()
@@ -115,7 +107,7 @@ class Main_Application(tk.Frame):
 
             self.password = self.Seqqe.generate_sequence_based_password(sequence, choices)
 
-        elif self.MainMenu.get() == 2:  # Word-Based Password Generator activated
+        elif self.MainMenu.get() == 3:  # Word-Based Password Generator activated
             pass # to be written
 
         else:

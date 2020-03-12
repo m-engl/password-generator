@@ -1,0 +1,27 @@
+import random
+from . import charSet as cs
+
+class Word_Based_Password:
+
+    def randomize_case(letter):
+    
+        if letter == " ":
+            letter = ""
+
+        elif letter != " ":
+            randomChoice = random.choice('abc')
+            if randomChoice == 'a' :
+                letter = letter.lower()
+            elif randomChoice == 'b' :
+                letter = letter.upper()
+            elif randomChoice == 'c' :
+                letter = letter
+
+
+    def find_lookalike(letter):
+        if letter.upper() in cs.specialsDict:
+            letter = (random.choice(cs.specialsDict[letter.upper()]))
+            return letter
+        else:
+            print('use only latin alphabet letters and no diacritic signs')
+        return letter

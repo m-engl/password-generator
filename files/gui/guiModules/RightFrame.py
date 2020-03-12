@@ -5,6 +5,15 @@ class Right_Frame(tk.Frame):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
 
+        self.customWordChoice = tk.IntVar()
+
+        self.customWordMODES = [
+    (1, "Mix case randomly"),
+    (2, "Change all the letters to look-alike\nnumbers and special characters"),
+    (3, "Mix case and change a chosen number \nof letters to special characters and/or numbers"),
+    (4, "Add a chosen number of special characters and/or\nnumbers in between the word's letters")
+            ]
+
         self.addChars = ["numbers", "special characters", "mixed case"]
 
         self.ChooseCustomWord = tk.Radiobutton(self, text="\"Crazy word\" password",
@@ -105,7 +114,7 @@ class Right_Frame(tk.Frame):
 
         def create_radios_cword():
             self.rb = tk.Radiobutton(self, text=description,
-                                     variable=self.master.customWordChoice, value=mode,
+                                     variable=self.customWordChoice, value=mode,
                                      justify="left")
             self.rb.grid(row=self.i, column=0, columnspan=5,
                          padx=(25, 25), pady=2,
@@ -114,7 +123,7 @@ class Right_Frame(tk.Frame):
 
         self.i = begin_with_row_number
 
-        for mode, description in self.master.customWordMODES:
+        for mode, description in self.customWordMODES:
             if mode == 4:
                 self.i = 11
                 create_radios_cword()
