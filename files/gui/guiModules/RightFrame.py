@@ -27,7 +27,7 @@ class Right_Frame(tk.Frame):
 
         self.EnterWordOKButton = tk.Button(self, text="OK",
                                            height=1, width=4,
-                                           command=self.master.get_word)
+                                           command=self.get_word)
         self.EnterWordOKButton.grid(row=1, column=3,
                                     padx=(2, 2),
                                     sticky='W')
@@ -95,16 +95,7 @@ class Right_Frame(tk.Frame):
                              sticky='W')
 
 
-
-
-
-
-
-
-
         # self.create_checkboxes_custom_word(14) # begin_with_row_number
-
-
 
 
     # METHODS:
@@ -129,6 +120,11 @@ class Right_Frame(tk.Frame):
             elif mode in range(1, 4):
                 create_radios_cword()
                 self.i += 1
+
+    def get_word(self):
+        self.word = self.FieldEnterWord.get()
+        self.LabelUserEnteredWord.config(text=str(self.word))
+        return self.word
 
     # def create_checkboxes_custom_word(self, begin_with_row_number):
     #     self.i = begin_with_row_number

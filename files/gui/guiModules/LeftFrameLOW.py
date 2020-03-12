@@ -23,7 +23,7 @@ class Left_Frame_LOW(tk.Frame):
                                      padx=(20, 5))
 
         self.EnterSequenceOKButton = tk.Button(self, text="OK", height = 1, width = 4,
-                                        command=self.master.get_sequence)
+                                               command=self.get_sequence)
         self.EnterSequenceOKButton.grid(row=3, column=1, columnspan = 3,
                                         padx=(20, 30),
                                         sticky='W')
@@ -56,6 +56,13 @@ class Left_Frame_LOW(tk.Frame):
         self.checkMixed.grid(row=8, column=1, columnspan=4,
                              sticky='W')
 
+
+
+    # METHODS
+    def get_sequence(self):
+        self.sequence = self.FieldEnterSequence.get()
+        self.LabelUserEnteredSequence.config(text=str(self.sequence))
+        return self.sequence
 
         # self.create_checkboxes_sequence(6) # arg: begin_with_row_number
 

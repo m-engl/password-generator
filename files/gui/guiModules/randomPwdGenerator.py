@@ -1,6 +1,6 @@
 
 import random
-import charSet as cs
+from . import charSet as cs
 
 class Random_Password_Generator:
 

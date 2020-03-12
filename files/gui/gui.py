@@ -5,7 +5,6 @@ from guiModules import LeftFrameUP as Left_Frame_UP
 from guiModules import LeftFrameLOW as Left_Frame_LOW
 from guiModules import RightFrame as Right_Frame
 from guiModules import LowerFrame as Lower_Frame
-from guiModules import charSet as cs
 from guiModules import randomPwdGenerator as Random_Password_Generator
 
 root = tk.Tk()
@@ -73,10 +72,8 @@ class Main_Application(tk.Frame):
         self.rightFrame.grid(row=1, column=1, rowspan=2, sticky='NESW')
         self.lowerFrame.grid(row=3, column=0, columnspan=2, sticky='NESW')
 
-        self.get_seq_choices()
-
         # Password Generator modules
-        self.Randy = Random_Password_Generator()
+        self.Randy = Random_Password_Generator.Random_Password_Generator()
 
     # GUI METHODS
     def activate_chosen_frame(self):
@@ -149,44 +146,41 @@ class Main_Application(tk.Frame):
     #     return self.password
 
     # SEQUENCE BASED-PWD GENERATING
-    def get_sequence(self):
-        self.sequence = self.leftFrameLower.FieldEnterSequence.get()
-        self.leftFrameLower.LabelUserEnteredSequence.config(text = str(self.sequence))
-        return self.sequence
-
-    def get_seq_choices(self):
-        # print(self.leftFrameLower.numseq.get())
-        pass
+    # def get_sequence(self):
+    #     self.sequence = self.leftFrameLower.FieldEnterSequence.get()
+    #     self.leftFrameLower.LabelUserEnteredSequence.config(text = str(self.sequence))
+    #     return self.sequence
 
 
-    def generate_sequence_based_password(self):
 
-        sequence = self.get_sequence()
-
-        def spaces_to_specials(sign):
-            if sign == " ":
-                sign = random.choice(cs.specialChars)
-                return sign
-            else:
-                return sign
-
-        specialSequence = ''.join(spaces_to_specials(sign) for sign in sequence)  # cat]wants$food-badly
-        specialSequenceMixed = ''.join(cw.randomize_case(sign) for sign in specialSequence)  # cat]wANTS$fOod-BadlY
-        mixedSequence = ''.join(cw.randomize_case(sign) for sign in sequence)  # CAtwantsfOoDBAdlY
-
-        self.password = specialSequence
+    # def generate_sequence_based_password(self):
+    #
+    #     sequence = self.get_sequence()
+    #
+    #     def spaces_to_specials(sign):
+    #         if sign == " ":
+    #             sign = random.choice(cs.specialChars)
+    #             return sign
+    #         else:
+    #             return sign
+    #
+    #     specialSequence = ''.join(spaces_to_specials(sign) for sign in sequence)  # cat]wants$food-badly
+    #     specialSequenceMixed = ''.join(cw.randomize_case(sign) for sign in specialSequence)  # cat]wANTS$fOod-BadlY
+    #     mixedSequence = ''.join(cw.randomize_case(sign) for sign in sequence)  # CAtwantsfOoDBAdlY
+    #
+    #     self.password = specialSequence
 
     # WORD-BASED PWD
 
-    def get_word(self):
-        self.word = self.rightFrame.FieldEnterWord.get()
-        self.rightFrame.LabelUserEnteredWord.config(text = str(self.word))
-        return self.word
+    # def get_word(self):
+    #     self.word = self.rightFrame.FieldEnterWord.get()
+    #     self.rightFrame.LabelUserEnteredWord.config(text = str(self.word))
+    #     return self.word
 
     # GENERAL:
     def display_password(self):
 
-        l = self.leftFrameUpper.get_length()
+        l = int(self.leftFrameUpper.get_length())
         s = self.leftFrameUpper.get_strength()
 
         self.password = self.Randy.generate_random_password(l, s)
