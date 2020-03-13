@@ -1,12 +1,3 @@
-# Read in user's word and:
-# 1 mix case randomly
-# 2 change characters to special chars or numbers that are "lookalikes"
-# 3 or both of the above
-# 4 add special characters and/or numbers in between the word's letters
-# 5 mix case and add numbers
-# 6 mix case and add special chars
-# 7 mix case and add numbers and special characters
-
 #import
 import random
 import string
@@ -33,7 +24,6 @@ def randomize_case(letter):
         elif randomChoice == 'c' :
             letter = letter
 
-    
     return letter
 
 

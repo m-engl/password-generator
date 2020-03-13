@@ -1,6 +1,7 @@
 
 import random
-from . import charSet as cs
+import charSet as cs
+
 
 class Random_Password_Generator:
 
@@ -19,6 +20,4 @@ class Random_Password_Generator:
         self.password = ''.join(random.choice(self.chosenSet) for _ in range(length))
         return self.password
 
-randy = Random_Password_Generator()
-print(randy.generate_random_password(12,2))
 

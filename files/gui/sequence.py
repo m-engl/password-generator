@@ -1,5 +1,6 @@
 import random
-from . import charSet as cs
+import charSet as cs
+
 
 class Sequence_Based_Generator:
 
@@ -47,9 +48,6 @@ class Sequence_Based_Generator:
                 return sign
         else:
             return sign
-
-
-
 
     def generate_sequence_based_password(self, sequence, choices):
 

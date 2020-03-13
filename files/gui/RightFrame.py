@@ -4,7 +4,8 @@ class Right_Frame(tk.Frame):
     def __init__(self, master, *args, **kwargs):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
-
+        self.numberAddSigns = int()
+        self.numberMixChange = int()
         self.customWordChoice = tk.IntVar()
 
         self.customWordMODES = [
@@ -53,7 +54,7 @@ class Right_Frame(tk.Frame):
         self.LabelMenuWord.grid(row=3, column=0, columnspan=5,
                                 padx=(25, 5), pady=(5),
                                 sticky='W')
-
+        #RADIO BUTTONS ROW 4-5-6
         self.create_radios_custom_word(4) # begin_with_row_number
 
         self.LabelEnterHowMany_mixChange = tk.Label(self,
@@ -63,19 +64,47 @@ class Right_Frame(tk.Frame):
                                          padx=(45, 5),
                                          sticky='W')
 
-        self.FieldEnterHowMany_mixChange = tk.Text(self, height=1, width=3,
+        self.FieldEnterHowMany_mixChange = tk.Entry(self, width=3,
                                                    bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterHowMany_mixChange.grid(row=7, column=2,
                                               padx=5, pady=2)
 
         self.EnterHowManyOKButton_mixChange = tk.Button(self, text="OK",
-                                                        height=1, width=4)
+                                                        height=1, width=4,
+                                                        command=self.get_number_mixChange)
         self.EnterHowManyOKButton_mixChange.grid(row=7, column=3,
                                                  padx=2, pady=2,
                                                  sticky='W')
 
         self.LabelUserEnteredHowMany_mixChange = tk.Label(self, text='2', fg='grey')
         self.LabelUserEnteredHowMany_mixChange.grid(row=7, column=4,
+                                                    padx=2, pady=2,
+                                                    sticky='W')
+
+        # RADIO BUTTONS ROW 11 - here
+        #next
+
+        self.LabelEnterHowMany_addSigns = tk.Label(self,
+            text="How many new signs do you want to add? ",
+            justify="left")
+        self.LabelEnterHowMany_addSigns.grid(row=12, column=0, columnspan=2,
+                                         padx=(45, 5),
+                                         sticky='W')
+
+        self.FieldEnterHowMany_addSigns = tk.Entry(self, width=3,
+                                                   bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterHowMany_addSigns.grid(row=12, column=2,
+                                              padx=5, pady=2)
+
+        self.EnterHowManyOKButton_addSigns = tk.Button(self, text="OK",
+                                                        height=1, width=4,
+                                                       command=self.get_number_addSigns)
+        self.EnterHowManyOKButton_addSigns.grid(row=12, column=3,
+                                                 padx=2, pady=2,
+                                                 sticky='W')
+
+        self.LabelUserEnteredHowMany_addSigns = tk.Label(self, text='2', fg='grey')
+        self.LabelUserEnteredHowMany_addSigns.grid(row=12, column=4,
                                                     padx=2, pady=2,
                                                     sticky='W')
 
@@ -106,9 +135,6 @@ class Right_Frame(tk.Frame):
                              sticky='W')
 
 
-
-
-
     # METHODS:
     def create_radios_custom_word(self, begin_with_row_number):
 
@@ -137,3 +163,23 @@ class Right_Frame(tk.Frame):
         self.LabelUserEnteredWord.config(text=str(self.word))
         return self.word
 
+    def get_number_mixChange(self):
+        self.numberMixChange = self.FieldEnterHowMany_mixChange.get()
+        self.LabelUserEnteredHowMany_mixChange.config(text = str(self.numberMixChange))
+        return self.numberMixChange
+
+    def get_number_addSigns(self):
+        self.numberAddSigns = self.FieldEnterHowMany_addSigns.get()
+        self.LabelUserEnteredHowMany_addSigns.config(text = str(self.numberAddSigns))
+        return self.numberAddSigns
+
+    def get_WORD_choice_level1(self): # from Radiobuttons
+        self.level1choiceWORD = self.customWordChoice.get()  # 1, 2, 3 or 4
+        return self.level1choiceWORD
+
+    def get_WORD_choice_level2(self): # from the submenus for Radiobutton 3 and 4
+        self.choices = list()
+        self.choices.append(self.num.get())
+        self.choices.append(self.spec.get())
+        self.choices.append(self.mix.get())
+        return self.choices

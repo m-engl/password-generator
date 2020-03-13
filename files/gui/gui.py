@@ -1,12 +1,13 @@
 import tkinter as tk
 import random
-from guiModules import UpperFrame as Upper_Frame
-from guiModules import LeftFrameUP as Left_Frame_UP
-from guiModules import LeftFrameLOW as Left_Frame_LOW
-from guiModules import RightFrame as Right_Frame
-from guiModules import LowerFrame as Lower_Frame
-from guiModules import randomPwdGenerator as Random_Password_Generator
-from guiModules import sequence as Sequence_Based_Generator
+import UpperFrame as Upper_Frame
+import LeftFrameUP as Left_Frame_UP
+import LeftFrameLOW as Left_Frame_LOW
+import RightFrame as Right_Frame
+import LowerFrame as Lower_Frame
+import randomPwdGenerator as Random_Password_Generator
+import sequence as Sequence_Based_Generator
+import wordbased as Word_Based_Password
 
 root = tk.Tk()
 
@@ -51,6 +52,7 @@ class Main_Application(tk.Frame):
         # Password Generator modules
         self.Randy = Random_Password_Generator.Random_Password_Generator()
         self.Seqqe = Sequence_Based_Generator.Sequence_Based_Generator()
+        self.Wordy = Word_Based_Password.Word_Based_Password()
 
     # GUI METHODS
     def activate_chosen_frame(self):
@@ -87,10 +89,6 @@ class Main_Application(tk.Frame):
             child.config(state='normal')
             print(child)
 
-    def activate_widget_group(self):
-        pass
-
-
     # GENERAL:
     def display_password(self):
 
@@ -108,15 +106,17 @@ class Main_Application(tk.Frame):
             self.password = self.Seqqe.generate_sequence_based_password(sequence, choices)
 
         elif self.MainMenu.get() == 3:  # Word-Based Password Generator activated
-            pass # to be written
+            word = self.rightFrame.get_word()
+            choicesLevel1 = self.rightFrame.get_WORD_choice_level1()
+            choicesLevel2 = self.rightFrame.get_WORD_choice_level2()
+
+            self.password = self.Wordy.generate_word_based_password(word, choicesLevel1, choicesLevel2)
 
         else:
             self.password = "ERROR: You have not chosen any option!"
 
-
-
-        self.upperFrame.ThePassword.delete(0,'end')
-        self.upperFrame.ThePassword.insert(0,self.password)
+        self.upperFrame.ThePassword.delete(0, 'end')
+        self.upperFrame.ThePassword.insert(0, str(self.password))
 
 
 
