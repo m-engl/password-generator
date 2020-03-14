@@ -106,11 +106,18 @@ class Main_Application(tk.Frame):
             self.password = self.Seqqe.generate_sequence_based_password(sequence, choices)
 
         elif self.MainMenu.get() == 3:  # Word-Based Password Generator activated
-            word = self.rightFrame.get_word()
-            choicesLevel1 = self.rightFrame.get_WORD_choice_level1()
-            choicesLevel2 = self.rightFrame.get_WORD_choice_level2()
+            usersCustomWord = str(self.rightFrame.get_word())
+            radiobuttonsChosen = self.rightFrame.get_WORD_choice_level1()
+            mixChangeOptionsChosen = int(self.rightFrame.get_number_mixChange())
+            howManySignsToAdd = self.rightFrame.get_number_addSigns()
+            checkbuttonsChecked = self.rightFrame.get_WORD_choice_level2()
 
-            self.password = self.Wordy.generate_word_based_password(word, choicesLevel1, choicesLevel2)
+
+            self.password = self.Wordy.generate_word_based_password(theWord=usersCustomWord,
+                                                                    choicesLevel1=radiobuttonsChosen,
+                                                                    choicesLevel2=checkbuttonsChecked,
+                                                                    numberMixChange=mixChangeOptionsChosen,
+                                                                    numberAddSigns=howManySignsToAdd)
 
         else:
             self.password = "ERROR: You have not chosen any option!"

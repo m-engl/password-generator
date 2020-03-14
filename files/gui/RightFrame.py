@@ -161,7 +161,7 @@ class Right_Frame(tk.Frame):
     def get_word(self):
         self.word = self.FieldEnterWord.get()
         self.LabelUserEnteredWord.config(text=str(self.word))
-        return self.word
+        return str(self.word)
 
     def get_number_mixChange(self):
         self.numberMixChange = self.FieldEnterHowMany_mixChange.get()

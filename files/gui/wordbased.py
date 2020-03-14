@@ -11,40 +11,76 @@ class Word_Based_Password:
 
         elif letter != " ":
             randomChoice = random.choice('abc')
-            if randomChoice == 'a' :
+            if randomChoice == 'a':
                 letter = letter.lower()
-            elif randomChoice == 'b' :
+            elif randomChoice == 'b':
                 letter = letter.upper()
-            elif randomChoice == 'c' :
+            elif randomChoice == 'c':
                 letter = letter
 
         return letter
 
     def find_lookalike(self, letter):
+
         if letter.upper() in cs.specialsDict:
             letter = (random.choice(cs.specialsDict[letter.upper()]))
             return letter
+
         else:
-            print('use only latin alphabet letters and no diacritic signs')
-        return letter
+            return('ERROR: Your word should only consist of letters.')
 
-    def generate_word_based_password(self, word, choicesLevel1, choicesLevel2=[0, 0, 0]):
+    def mix_chars_and_case(self, customWord, n):
 
-        # word = self.word
-        # choicesLevel1 = self.choicesLevel1
-        # choicesLevel2 = self.choicesLevel2
+        # Step 1: randomize case in the word
+        wordWithRandomCase = ''.join(self.randomize_case(letter) for letter in customWord)
 
-        if choicesLevel1 == 1: # Mix case randomly
-            self.password = ''.join(self.randomize_case(sign) for sign in word)
+        # Step 2: convert the string to list
+        wordAsList = list(wordWithRandomCase)
 
-        elif choicesLevel1 == 2: # Change all the letters to look-alike\nnumbers and special characters
-            print('2')
+        # Step 3: choose an 'n' number of letters to be changed to specials
+        # by getting their index number - randomly
+        indexToChange = random.sample(range(0, len(customWord)), n)
+        # print(indexToChange)
 
-        elif choicesLevel1 == 3: # Mix case and change a chosen number of letters to special characters and/or numbers
+        # get to all the chosen index numbers and change them to lookalike special characters
+        for indexNumber in indexToChange:
+            x = indexNumber
+            letterToSubstitute = customWord[x]
+            letterAsNewCharacter = self.find_lookalike(letterToSubstitute)
+            wordAsList[x] = letterAsNewCharacter  # substitution
+
+        # convert the list to a string again
+        mixedCaseAndSpecials = ''.join(wordAsList)
+        return mixedCaseAndSpecials
+
+
+
+    def generate_word_based_password(self, theWord, choicesLevel1,
+                                     numberMixChange=2, numberAddSigns=3,
+                                     choicesLevel2=[1, 0, 0]):
+
+        self.theWord = theWord # the word the user has entered
+        self.choicesLevel1 = choicesLevel1 # choice from the radiobuttons - value 1, 2, 3 or 4
+        self.numberMixChange = numberMixChange # under Radiobutton No. 3, "How many letters do you want
+                                               # to have changed to specials or numbers?"
+        self.choicesLevel2 = choicesLevel2 # choice from the checkboxes under radiobutton No.4
+        self.numberAddSigns = numberAddSigns # under Radiobutton No. 4, "How many signs do you want to add?"
+
+        if self.choicesLevel1 == 1: # Mix case randomly
+            self.password = "".join(self.randomize_case(sign) for sign in self.theWord)
+
+        elif self.choicesLevel1 == 2: # Change all the letters to look-alike\nnumbers and special characters
+            self.password = "".join(self.find_lookalike(sign) for sign in self.theWord)
+
+        elif self.choicesLevel1 == 3: # Mix case and change a chosen number of letters to special characters and/or numbers
+            # self.wordWithRandomCase = "".join(self.find_lookalike(sign) for sign in self.theWord)
+            self.password = self.mix_chars_and_case(self.theWord, self.numberMixChange)
+
+
+        elif self.choicesLevel1 == 4: # Add a chosen number of special characters and/or numbers in between the word's letters
             pass
 
-        elif choicesLevel1 == 4: # Add a chosen number of special characters and/or numbers in between the word's letters
-            pass
+        return self.password
 
 
 
@@ -80,4 +116,6 @@ class Word_Based_Password:
 ##############################################################
 
 Wordy = Word_Based_Password()
-print(Wordy.generate_word_based_password("blebleble", 2))
+print(Wordy.generate_word_based_password("bleblebleble", 3,
+                                     numberMixChange=3, numberAddSigns=2,
+                                     choicesLevel2=[1, 0, 0]))
