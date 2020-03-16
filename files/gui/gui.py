@@ -108,7 +108,7 @@ class Main_Application(tk.Frame):
         elif self.MainMenu.get() == 3:  # Word-Based Password Generator activated
             usersCustomWord = str(self.rightFrame.get_word())
             radiobuttonsChosen = self.rightFrame.get_WORD_choice_level1()
-            mixChangeOptionsChosen = int(self.rightFrame.get_number_mixChange())
+            mixChangeNumber = self.rightFrame.get_number_mixChange()
             howManySignsToAdd = self.rightFrame.get_number_addSigns()
             checkbuttonsChecked = self.rightFrame.get_WORD_choice_level2()
 
@@ -116,7 +116,7 @@ class Main_Application(tk.Frame):
             self.password = self.Wordy.generate_word_based_password(theWord=usersCustomWord,
                                                                     choicesLevel1=radiobuttonsChosen,
                                                                     choicesLevel2=checkbuttonsChecked,
-                                                                    numberMixChange=mixChangeOptionsChosen,
+                                                                    numberMixChange=mixChangeNumber,
                                                                     numberAddSigns=howManySignsToAdd)
 
         else:

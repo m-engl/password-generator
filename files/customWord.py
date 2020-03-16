@@ -122,11 +122,10 @@ def add_new_symbols_randomly(customWord):
     a = numberOfNewSymbols
     wordAsList = list(customWord)
 
-    for i in range(a):
+    for _ in range(a):
         randomSymbol = random.choice(chosenSet)
         randomIndex = random.randint(0, len(customWord))
         wordAsList.insert(randomIndex, randomSymbol)
-    
     return (''.join(wordAsList))
 
 # 6 and 7 can be built on the already existing functions
