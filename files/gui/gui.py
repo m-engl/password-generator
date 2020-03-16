@@ -8,6 +8,7 @@ import LowerFrame as Lower_Frame
 import randomPwdGenerator as Random_Password_Generator
 import sequence as Sequence_Based_Generator
 import wordbased as Word_Based_Password
+import settings as settings
 
 root = tk.Tk()
 
@@ -25,12 +26,6 @@ class Main_Application(tk.Frame):
         master.title(theTitle)
         self.logo = tk.PhotoImage(file=theLogo)
         self.MainMenu = tk.IntVar()
-        # Main Menu:
-        # random password 1
-        # word sequence based 2
-        # custom word/crazy word based 3
-        # self.customWordChoice = tk.IntVar()
-        # self.customWordMODES = customWordMODES
         self.sequence = tk.StringVar()
         self.password = tk.StringVar()
         self.word = tk.StringVar()
@@ -53,6 +48,10 @@ class Main_Application(tk.Frame):
         self.Randy = Random_Password_Generator.Random_Password_Generator()
         self.Seqqe = Sequence_Based_Generator.Sequence_Based_Generator()
         self.Wordy = Word_Based_Password.Word_Based_Password()
+
+        # SETTINGS
+        Set = settings.Config()
+
 
     # GUI METHODS
     def activate_chosen_frame(self):
@@ -89,7 +88,7 @@ class Main_Application(tk.Frame):
             child.config(state='normal')
             print(child)
 
-    # GENERAL:
+    # DISPLAY PASSWORD METHOD:
     def display_password(self):
 
         if self.MainMenu.get() == 1: # Random Password Generator activated
@@ -124,8 +123,6 @@ class Main_Application(tk.Frame):
 
         self.upperFrame.ThePassword.delete(0, 'end')
         self.upperFrame.ThePassword.insert(0, str(self.password))
-
-
 
 
 # COME TO LIFE
