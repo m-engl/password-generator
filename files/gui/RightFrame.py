@@ -1,12 +1,32 @@
 import tkinter as tk
+import config
 
 class Right_Frame(tk.Frame):
+
     def __init__(self, master, *args, **kwargs):
+
         tk.Frame.__init__(self, master, *args, **kwargs)
+
         self.master = master
+
+        # VARS & SETTINGS:
+        Set = config.Config()
+
         self.numberAddSigns = int()
+        self.numberAddSigns = Set.addsignsHowMany
         self.numberMixChange = int()
+        self.numberMixChange = Set.mixchangeHowMany
         self.customWordChoice = tk.IntVar()
+        self.customWordChoice.set(Set.customwordchoice)
+
+        self.num = tk.IntVar()
+        self.spec = tk.IntVar()
+        self.mix = tk.IntVar()
+        self.num.set(Set.wNum)
+        self.spec.set(Set.wSpec)
+        self.mix.set(Set.wMix)
+
+
 
         self.customWordMODES = [
     (1, "Mix case randomly"),
@@ -20,13 +40,13 @@ class Right_Frame(tk.Frame):
         self.ChooseCustomWord = tk.Radiobutton(self, text="\"Crazy word\" password",
                                        variable=self.master.MainMenu, value=3,
                                        justify="left",
-                                           command=self.master.activate_chosen_frame)
+                                           command=lambda: [self.master.activate_chosen_frame(),
+                                                            self.enable_suboptions_set(Set.customwordchoice)])
         self.ChooseCustomWord.grid(row=0, column=0, columnspan=5,
                                   padx=(0, 5),
                                    sticky='W')
 
-        # CUSTOM WORD ENTER and confirm
-
+        # AREA FOR ENTERING THE CUSTOM WORD:
         self.LabelEnterWord = tk.Label(self, text="Enter your word:")
         self.LabelEnterWord.grid(row=1, column=0,
                                  padx=(20, 5), pady=(5),
@@ -36,6 +56,7 @@ class Right_Frame(tk.Frame):
         self.FieldEnterWord.grid(row=1, column=1,  columnspan=2,
                                  padx=(5, 2),
                                  sticky='W')
+        self.FieldEnterWord.insert(0, Set.word)
 
         self.EnterWordOKButton = tk.Button(self, text="OK",
                                            height=1, width=4,
@@ -68,6 +89,7 @@ class Right_Frame(tk.Frame):
                                                    bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterHowMany_mixChange.grid(row=7, column=2,
                                               padx=5, pady=2)
+        self.FieldEnterHowMany_mixChange.insert(0, self.numberMixChange)
 
         self.EnterHowManyOKButton_mixChange = tk.Button(self, text="OK",
                                                         height=1, width=4,
@@ -95,6 +117,7 @@ class Right_Frame(tk.Frame):
                                                    bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterHowMany_addSigns.grid(row=12, column=2,
                                               padx=5, pady=2)
+        self.FieldEnterHowMany_addSigns.insert(0, self.numberAddSigns)
 
         self.EnterHowManyOKButton_addSigns = tk.Button(self, text="OK",
                                                         height=1, width=4,
@@ -115,9 +138,6 @@ class Right_Frame(tk.Frame):
 
         # Checkboxes
 
-        self.num = tk.IntVar()
-        self.spec = tk.IntVar()
-        self.mix = tk.IntVar()
 
         self.checkNumbers = tk.Checkbutton(self, text=self.addChars[0], variable=self.num)
         self.checkNumbers.grid(row=14, column=0, columnspan=4,
@@ -182,8 +202,6 @@ class Right_Frame(tk.Frame):
             elif mode == 4:
                 self.i = 11
                 create_radios_cword()
-
-
 
     def enable_suboptions_set(self, subset):
 

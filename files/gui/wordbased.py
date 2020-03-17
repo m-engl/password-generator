@@ -4,6 +4,9 @@ import charSet as cs
 
 class Word_Based_Password:
 
+    def __init__(self):
+        self.password = "PROMPT: Select options!"
+
     def randomize_case(self, letter):
 
         if letter == " ":
@@ -65,9 +68,6 @@ class Word_Based_Password:
 
         return (''.join(wordAsList))
 
-
-
-
     def generate_word_based_password(self, theWord, choicesLevel1,
                                      numberMixChange=2, numberAddSigns=3,
                                      choicesLevel2=[1, 0, 0]):
@@ -123,41 +123,3 @@ class Word_Based_Password:
                 self.password = "PROMPT: Choose your options!"
 
         return self.password
-
-
-
-#######################################################
-
-    # if choicesLevel2 == [1, 0, 0]:  # NUMBERS /////////////
-    #     self.password = ''.join(self.spaces_to_numbers(sign) for sign in self.sequence)
-    #
-    # elif choicesLevel2 == [1, 0, 1]:  # NUMBERS + MIXED CASE  /////////////
-    #     self.numsAdded = ''.join(self.spaces_to_numbers(sign) for sign in self.sequence)
-    #     self.password = ''.join(self.randomize_case(sign) for sign in self.numsAdded)
-    #
-    # elif choicesLevel2 == [0, 1, 0]:  # SPECIALS /////////////////
-    #     self.password = ''.join(self.spaces_to_specials(sign) for sign in self.sequence)
-    #
-    # elif choicesLevel2 == [0, 1, 1]:  # SPECIALS + MIXED CASE /////////////////
-    #     self.specsAdded = ''.join(self.spaces_to_specials(sign) for sign in self.sequence)
-    #     self.password = ''.join(self.randomize_case(sign) for sign in self.specsAdded)
-    #
-    # elif choicesLevel2 == [0, 0, 1]:  # MIXED CASE /////////////////////
-    #     self.password = ''.join(self.randomize_case(sign) for sign in self.sequence)
-    #
-    # elif choicesLevel2 == [1, 1, 0]:  # NUMBERS AND/OR SPECIALS /////////////
-    #     self.password = ''.join(self.spaces_to_numbers_or_specials(sign) for sign in self.sequence)
-    #
-    # elif choicesLevel2 == [1, 1, 1]:  # MIXED CASE, NUMBERS AND SPECIALS
-    #     self.numsAndSpecsAdded = ''.join(self.spaces_to_numbers_or_specials(sign) for sign in self.sequence)
-    #     self.password = ''.join(self.randomize_case(sign) for sign in self.numsAndSpecsAdded)
-    #
-    # else:
-    #     self.message = "No option chosen!"
-
-##############################################################
-
-Wordy = Word_Based_Password()
-print(Wordy.generate_word_based_password("bleblebleble", 3,
-                                     numberMixChange=3, numberAddSigns=2,
-                                     choicesLevel2=[1, 0, 0]))

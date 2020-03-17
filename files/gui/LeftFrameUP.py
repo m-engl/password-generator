@@ -1,12 +1,20 @@
 import tkinter as tk
+import config
 
 class Left_Frame_UP(tk.Frame):
 
     def __init__(self, master, *args, **kwargs):
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
+
+        # VARS & SETTINGS
+
+        Set = config.Config()
+
         self.length = int()
+        self.length = Set.length
         self.ChooseStrength = tk.IntVar()
+        self.ChooseStrength.set(Set.choosestrength)
 
         self.strengthMODES = [
                 (1, "Weak"),
@@ -30,6 +38,7 @@ class Left_Frame_UP(tk.Frame):
         self.FieldEnterLength = tk.Entry(self, width=3, bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterLength.grid(row=1, column=2,
                                    padx=2, pady=2)
+        self.FieldEnterLength.insert(0, self.length)
 
         self.EnterLengthOKButton = tk.Button(self, text="OK",
                                              height=1, width=4,

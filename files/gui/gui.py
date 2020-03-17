@@ -1,5 +1,6 @@
 import tkinter as tk
 import random
+import win32clipboard
 import UpperFrame as Upper_Frame
 import LeftFrameUP as Left_Frame_UP
 import LeftFrameLOW as Left_Frame_LOW
@@ -8,27 +9,39 @@ import LowerFrame as Lower_Frame
 import randomPwdGenerator as Random_Password_Generator
 import sequence as Sequence_Based_Generator
 import wordbased as Word_Based_Password
-import settings as settings
+import config
 
 root = tk.Tk()
 
-# VARIABLES
+# "GENERAL" VARIABLES
 theTitle = "My ULTIMATE (PASS)WORD Generator"
 theLogo = "img/logo.gif"
 
-# Here comes the main application class
-
+# MAIN APPLICATION
 class Main_Application(tk.Frame):
 
     def __init__(self, master, *args, **kwargs):
         tk.Frame.__init__(self, master, *args, **kwargs)
+
+        # VARIABLES & SETTINGS:
         self.master = master
         master.title(theTitle)
         self.logo = tk.PhotoImage(file=theLogo)
-        self.MainMenu = tk.IntVar()
-        self.sequence = tk.StringVar()
+
         self.password = tk.StringVar()
+
+        Set = config.Config()
+        self.MainMenu = tk.IntVar()
+        self.MainMenu.set(Set.mainmenu)
+        self.sequence = tk.StringVar()
+        self.sequence.set(Set.sequence)
         self.word = tk.StringVar()
+        self.word.set(Set.word)
+
+        # Password Generator modules:
+        self.Randy = Random_Password_Generator.Random_Password_Generator()
+        self.Seqqe = Sequence_Based_Generator.Sequence_Based_Generator()
+        self.Wordy = Word_Based_Password.Word_Based_Password()
 
         # FRAMES
         self.upperFrame = Upper_Frame.Upper_Frame(self, highlightbackground="black", highlightthickness=1)
@@ -43,15 +56,6 @@ class Main_Application(tk.Frame):
         self.leftFrameLower.grid(row=2, column=0, sticky='NESW')
         self.rightFrame.grid(row=1, column=1, rowspan=2, sticky='NESW')
         self.lowerFrame.grid(row=3, column=0, columnspan=2, sticky='NESW')
-
-        # Password Generator modules
-        self.Randy = Random_Password_Generator.Random_Password_Generator()
-        self.Seqqe = Sequence_Based_Generator.Sequence_Based_Generator()
-        self.Wordy = Word_Based_Password.Word_Based_Password()
-
-        # SETTINGS
-        Set = settings.Config()
-
 
     # GUI METHODS
     def activate_chosen_frame(self):
@@ -124,9 +128,23 @@ class Main_Application(tk.Frame):
         self.upperFrame.ThePassword.delete(0, 'end')
         self.upperFrame.ThePassword.insert(0, str(self.password))
 
+    # CLIPBOARD
+    def copy_to_clipboard(self):
+        win32clipboard.OpenClipboard()
+        win32clipboard.EmptyClipboard()
+        win32clipboard.SetClipboardText(self.upperFrame.ThePassword.get())
+        win32clipboard.CloseClipboard()
+
 
 # COME TO LIFE
 
 main = Main_Application(root)
 main.grid(column = 0, row = 0, padx = 10, pady = 10)
+main.activate_chosen_frame()
+main.leftFrameUpper.get_length()
+main.leftFrameUpper.get_strength()
+main.leftFrameLower.get_sequence()
+main.rightFrame.get_word()
+
+
 tk.mainloop()

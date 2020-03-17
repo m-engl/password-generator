@@ -30,6 +30,7 @@ class Upper_Frame(tk.Frame):
                                     bg="light goldenrod")  # , relief="solid", borderwidth=1
         self.ThePassword.grid(row=2, column=2, rowspan=2)
 
-        self.CopyButton = tk.Button(self, text="Copy")
+        self.CopyButton = tk.Button(self, text="Copy",
+                                    command=self.master.copy_to_clipboard)
         self.CopyButton.grid(row=2, column=3, rowspan=2,
                              padx=5, pady=1)

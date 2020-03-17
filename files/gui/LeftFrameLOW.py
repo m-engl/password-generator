@@ -1,13 +1,28 @@
 import tkinter as tk
+import config
 
 class Left_Frame_LOW(tk.Frame):
 
     def __init__(self, master, *args, **kwargs):
+
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
 
+        # VARS & SETTINGS
+        Set = config.Config()
+        self.sequence = Set.sequence
+
+        self.num = tk.IntVar()
+        self.spec = tk.IntVar()
+        self.mix = tk.IntVar()
+        self.num.set(Set.seqNum)
+        self.spec.set(Set.seqSpec)
+        self.mix.set(Set.seqMix)
+
         self.seqCHOICES = ["numbers", "special characters", "mixed case"]
 
+
+        # WIDGETS
         self.ChooseWordSequence = tk.Radiobutton(self, text="Word sequence-based password",
                                             variable=self.master.MainMenu, value=2,
                                            command=self.master.activate_chosen_frame)
@@ -23,6 +38,7 @@ class Left_Frame_LOW(tk.Frame):
         self.FieldEnterSequence = tk.Entry(self, width=28, bg="snow2")  # , relief="solid", borderwidth=1
         self.FieldEnterSequence.grid(row=2, column=0, columnspan=3,
                                      padx=(20, 5))
+        self.FieldEnterSequence.insert(0, self.sequence)
 
         self.EnterSequenceOKButton = tk.Button(self, text="OK", height = 1, width = 4,
                                                command=self.get_sequence)
@@ -41,10 +57,6 @@ class Left_Frame_LOW(tk.Frame):
                                sticky='W')
 
         # Checkboxes
-
-        self.num = tk.IntVar()
-        self.spec = tk.IntVar()
-        self.mix = tk.IntVar()
 
         self.checkNumbers = tk.Checkbutton(self, text=self.seqCHOICES[0], variable=self.num)
         self.checkNumbers.grid(row=6, column=1, columnspan=4,

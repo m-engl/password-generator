@@ -4,6 +4,9 @@ import charSet as cs
 
 class Sequence_Based_Generator:
 
+    def __init__(self):
+        self.password = "PROMPT: Select options!"
+
     def randomize_case(self, letter):
 
         if letter == " ":
