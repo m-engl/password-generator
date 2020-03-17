@@ -81,15 +81,15 @@ class Right_Frame(tk.Frame):
                                                     padx=2, pady=2,
                                                     sticky='W')
 
-        # RADIO BUTTONS ROW 11 - here
-        #next
+        # RADIO BUTTONS ROW 11 here
+        # next
 
         self.LabelEnterHowMany_addSigns = tk.Label(self,
             text="How many new signs do you want to add? ",
             justify="left")
         self.LabelEnterHowMany_addSigns.grid(row=12, column=0, columnspan=2,
-                                         padx=(45, 5),
-                                         sticky='W')
+                                             padx=(45, 5),
+                                             sticky='W')
 
         self.FieldEnterHowMany_addSigns = tk.Entry(self, width=3,
                                                    bg="snow2")  # , relief="solid", borderwidth=1
@@ -134,6 +134,29 @@ class Right_Frame(tk.Frame):
                              padx=60,
                              sticky='W')
 
+        # SUB-OPTION WIDGET SETS:
+        # These are activated when suitable
+
+        # activated only on choice of self.customWordChoice=3
+        self.mixChangeWidgets = [
+            self.LabelEnterHowMany_mixChange,
+            self.FieldEnterHowMany_mixChange,
+            self.EnterHowManyOKButton_mixChange,
+            self.LabelUserEnteredHowMany_mixChange
+        ]
+
+        # activated only on choice of self.customWordChoice=4
+        self.addSignsWidgets = [
+            self.LabelEnterHowMany_addSigns,
+            self.FieldEnterHowMany_addSigns,
+            self.EnterHowManyOKButton_addSigns,
+            self.LabelUserEnteredHowMany_addSigns,
+            self.LabelUse,
+            self.checkNumbers,
+            self.checkSpecials,
+            self.checkMixed
+        ]
+
 
     # METHODS:
     def create_radios_custom_word(self, begin_with_row_number):
@@ -141,7 +164,8 @@ class Right_Frame(tk.Frame):
         def create_radios_cword():
             self.rb = tk.Radiobutton(self, text=description,
                                      variable=self.customWordChoice, value=mode,
-                                     justify="left")
+                                     justify="left",
+                                     command=lambda: self.enable_suboptions_set(self.customWordChoice.get()))
             self.rb.grid(row=self.i, column=0, columnspan=5,
                          padx=(25, 25), pady=2,
                          sticky='W')
@@ -150,13 +174,40 @@ class Right_Frame(tk.Frame):
         self.i = begin_with_row_number
 
         for mode, description in self.customWordMODES:
-            if mode == 4:
+
+            if mode in range(1, 4):
+                create_radios_cword()
+                self.i += 1
+
+            elif mode == 4:
                 self.i = 11
                 create_radios_cword()
 
-            elif mode in range(1, 4):
-                create_radios_cword()
-                self.i += 1
+
+
+    def enable_suboptions_set(self, subset):
+
+        allSuboptions = self.mixChangeWidgets + self.addSignsWidgets
+
+        if subset == 3:
+
+            for widget in self.addSignsWidgets:
+                widget.config(state="disabled")
+
+            for widget in self.mixChangeWidgets:
+                widget.config(state="normal")
+
+        elif subset == 4:
+
+            for widget in self.mixChangeWidgets:
+                widget.config(state="disabled")
+
+            for widget in self.addSignsWidgets:
+                widget.config(state="normal")
+
+        else:
+            for widget in allSuboptions:
+                widget.config(state="disabled")
 
     def get_word(self):
         self.word = self.FieldEnterWord.get()
