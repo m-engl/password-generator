@@ -43,17 +43,13 @@ class Left_Frame_UP(tk.Frame):
                                    padx=2, pady=2)
         self.FieldEnterLength.insert(0, self.length)
 
-        self.PlusButton = tk.Button(self, text='+',
+        self.PlusButton = tk.Button(self, text='+', width=2,
                                     command=lambda: Values.increment(self.length, self.FieldEnterLength))
-        self.MinusButton = tk.Button(self, text='-',
+        self.MinusButton = tk.Button(self, text='-', width=2,
                                      command=lambda: Values.decrement(self.length, self.FieldEnterLength))
 
-        self.PlusButton.grid(row=1, column=3,
-                                      padx=2, pady=2,
-                                      sticky='W')
-        self.MinusButton.grid(row=1, column=4,
-                                         padx=2, pady=2,
-                                         sticky='W')
+        self.PlusButton.grid(row=1, column=3, sticky='W')
+        self.MinusButton.grid(row=1, column=4, sticky='W')
 
         # self.EnterLengthOKButton = tk.Button(self, text="OK",
         #                                      height=1, width=4,
@@ -77,9 +73,9 @@ class Left_Frame_UP(tk.Frame):
     def create_radios_strength(self, begin_with_row_number):
         self.i = begin_with_row_number
         for choice, description in self.strengthMODES:
-            self.rb = tk.Radiobutton(self, text = description, variable = self.ChooseStrength, value = choice)
-            self.rb.grid(row = self.i, column=1, columnspan=4,
-                         padx = (25, 5),
+            self.rb = tk.Radiobutton(self, text=description, variable=self.ChooseStrength, value=choice)
+            self.rb.grid(row=self.i, column=1, columnspan=4,
+                         padx=(25, 5),
                          sticky='W')
             self.i += 1
 

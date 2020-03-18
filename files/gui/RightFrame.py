@@ -1,4 +1,5 @@
 import tkinter as tk
+import valuemethods
 import config
 
 class Right_Frame(tk.Frame):
@@ -6,8 +7,9 @@ class Right_Frame(tk.Frame):
     def __init__(self, master, *args, **kwargs):
 
         tk.Frame.__init__(self, master, *args, **kwargs)
-
         self.master = master
+
+        Values = valuemethods.Value_Action()
 
         # VARS & SETTINGS:
         Set = config.Config()
@@ -58,18 +60,18 @@ class Right_Frame(tk.Frame):
                                  sticky='W')
         self.FieldEnterWord.insert(0, Set.word)
 
-        self.EnterWordOKButton = tk.Button(self, text="OK",
-                                           height=1, width=4,
-                                           command=self.get_word)
-        self.EnterWordOKButton.grid(row=1, column=3,
-                                    padx=(2, 2),
-                                    sticky='W')
-
-        self.LabelUserEnteredWord = tk.Label(self, text='peculiar', # change text to user input
-                                             fg='grey')
-        self.LabelUserEnteredWord.grid(row=2, column=1,
-                                       padx=2, pady=2,
-                                       sticky='W')
+        # self.EnterWordOKButton = tk.Button(self, text="OK",
+        #                                    height=1, width=4,
+        #                                    command=self.get_word)
+        # self.EnterWordOKButton.grid(row=1, column=3,
+        #                             padx=(2, 2),
+        #                             sticky='W')
+        #
+        # self.LabelUserEnteredWord = tk.Label(self, text='peculiar', # change text to user input
+        #                                      fg='grey')
+        # self.LabelUserEnteredWord.grid(row=2, column=1,
+        #                                padx=2, pady=2,
+        #                                sticky='W')
 
         self.LabelMenuWord = tk.Label(self, text='Choose your options:')
         self.LabelMenuWord.grid(row=3, column=0, columnspan=5,
@@ -91,17 +93,31 @@ class Right_Frame(tk.Frame):
                                               padx=5, pady=2)
         self.FieldEnterHowMany_mixChange.insert(0, self.numberMixChange)
 
-        self.EnterHowManyOKButton_mixChange = tk.Button(self, text="OK",
-                                                        height=1, width=4,
-                                                        command=self.get_number_mixChange)
-        self.EnterHowManyOKButton_mixChange.grid(row=7, column=3,
-                                                 padx=2, pady=2,
-                                                 sticky='W')
+        self.PlusButton_mixChange = tk.Button(self, text='+',width=2,
+                                    command=lambda: Values.increment(self.numberMixChange,
+                                                                     self.FieldEnterHowMany_mixChange))
+        self.MinusButton_mixChange = tk.Button(self, text='-',width=2,
+                                     command=lambda: Values.decrement(self.numberMixChange,
+                                                                      self.FieldEnterHowMany_mixChange))
 
-        self.LabelUserEnteredHowMany_mixChange = tk.Label(self, text='2', fg='grey')
-        self.LabelUserEnteredHowMany_mixChange.grid(row=7, column=4,
-                                                    padx=2, pady=2,
-                                                    sticky='W')
+        self.PlusButton_mixChange.grid(row=7, column=3,
+                                      padx=2, pady=2,
+                                      sticky='W')
+        self.MinusButton_mixChange.grid(row=7, column=4,
+                                         padx=2, pady=2,
+                                         sticky='W')
+
+        # self.EnterHowManyOKButton_mixChange = tk.Button(self, text="OK",
+        #                                                 height=1, width=4,
+        #                                                 command=self.get_number_mixChange)
+        # self.EnterHowManyOKButton_mixChange.grid(row=7, column=3,
+        #                                          padx=2, pady=2,
+        #                                          sticky='W')
+        #
+        # self.LabelUserEnteredHowMany_mixChange = tk.Label(self, text='2', fg='grey')
+        # self.LabelUserEnteredHowMany_mixChange.grid(row=7, column=4,
+        #                                             padx=2, pady=2,
+        #                                             sticky='W')
 
         # RADIO BUTTONS ROW 11 here
         # next
@@ -119,17 +135,31 @@ class Right_Frame(tk.Frame):
                                               padx=5, pady=2)
         self.FieldEnterHowMany_addSigns.insert(0, self.numberAddSigns)
 
-        self.EnterHowManyOKButton_addSigns = tk.Button(self, text="OK",
-                                                        height=1, width=4,
-                                                       command=self.get_number_addSigns)
-        self.EnterHowManyOKButton_addSigns.grid(row=12, column=3,
-                                                 padx=2, pady=2,
-                                                 sticky='W')
+        self.PlusButton_addSigns = tk.Button(self, text='+', width=2,
+                                    command=lambda: Values.increment(self.numberAddSigns,
+                                                                     self.FieldEnterHowMany_addSigns))
+        self.MinusButton_addSigns = tk.Button(self, text='-', width=2,
+                                    command=lambda: Values.decrement(self.numberAddSigns,
+                                                                     self.FieldEnterHowMany_addSigns))
 
-        self.LabelUserEnteredHowMany_addSigns = tk.Label(self, text='2', fg='grey')
-        self.LabelUserEnteredHowMany_addSigns.grid(row=12, column=4,
-                                                    padx=2, pady=2,
-                                                    sticky='W')
+        self.PlusButton_addSigns.grid(row=12, column=3,
+                                      padx=2, pady=2,
+                                      sticky='W')
+        self.MinusButton_addSigns.grid(row=12, column=4,
+                                         padx=2, pady=2,
+                                         sticky='W')
+
+        # self.EnterHowManyOKButton_addSigns = tk.Button(self, text="OK",
+        #                                                 height=1, width=4,
+        #                                                command=self.get_number_addSigns)
+        # self.EnterHowManyOKButton_addSigns.grid(row=12, column=3,
+        #                                          padx=2, pady=2,
+        #                                          sticky='W')
+        #
+        # self.LabelUserEnteredHowMany_addSigns = tk.Label(self, text='2', fg='grey')
+        # self.LabelUserEnteredHowMany_addSigns.grid(row=12, column=4,
+        #                                             padx=2, pady=2,
+        #                                             sticky='W')
 
         self.LabelUse = tk.Label(self, text='Use:')
         self.LabelUse.grid(row=13, column=0, columnspan=4,
@@ -161,16 +191,16 @@ class Right_Frame(tk.Frame):
         self.mixChangeWidgets = [
             self.LabelEnterHowMany_mixChange,
             self.FieldEnterHowMany_mixChange,
-            self.EnterHowManyOKButton_mixChange,
-            self.LabelUserEnteredHowMany_mixChange
+            self.PlusButton_mixChange,
+            self.MinusButton_mixChange
         ]
 
         # activated only on choice of self.customWordChoice=4
         self.addSignsWidgets = [
             self.LabelEnterHowMany_addSigns,
             self.FieldEnterHowMany_addSigns,
-            self.EnterHowManyOKButton_addSigns,
-            self.LabelUserEnteredHowMany_addSigns,
+            self.PlusButton_addSigns,
+            self.MinusButton_addSigns,
             self.LabelUse,
             self.checkNumbers,
             self.checkSpecials,
@@ -229,17 +259,17 @@ class Right_Frame(tk.Frame):
 
     def get_word(self):
         self.word = self.FieldEnterWord.get()
-        self.LabelUserEnteredWord.config(text=str(self.word))
+        # self.LabelUserEnteredWord.config(text=str(self.word))
         return str(self.word)
 
     def get_number_mixChange(self):
         self.numberMixChange = self.FieldEnterHowMany_mixChange.get()
-        self.LabelUserEnteredHowMany_mixChange.config(text = str(self.numberMixChange))
+        # self.LabelUserEnteredHowMany_mixChange.config(text = str(self.numberMixChange))
         return self.numberMixChange
 
     def get_number_addSigns(self):
         self.numberAddSigns = self.FieldEnterHowMany_addSigns.get()
-        self.LabelUserEnteredHowMany_addSigns.config(text = str(self.numberAddSigns))
+        # self.LabelUserEnteredHowMany_addSigns.config(text = str(self.numberAddSigns))
         return self.numberAddSigns
 
     def get_WORD_choice_level1(self): # from Radiobuttons

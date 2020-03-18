@@ -35,45 +35,42 @@ class Left_Frame_LOW(tk.Frame):
                                          padx=(20, 5), pady=(5),
                                          sticky='W')
 
-        self.FieldEnterSequence = tk.Entry(self, width=28, bg="snow2")  # , relief="solid", borderwidth=1
-        self.FieldEnterSequence.grid(row=2, column=0, columnspan=3,
-                                     padx=(20, 5))
+        self.FieldEnterSequence = tk.Entry(self, width=30, bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterSequence.grid(row=2, column=0, columnspan=2,
+                                     padx=(25, 10))
         self.FieldEnterSequence.insert(0, self.sequence)
 
-        self.EnterSequenceOKButton = tk.Button(self, text="OK", height = 1, width = 4,
-                                               command=self.get_sequence)
-        self.EnterSequenceOKButton.grid(row=3, column=1, columnspan = 3,
-                                        padx=(20, 30),
-                                        sticky='W')
+        # self.EnterSequenceOKButton = tk.Button(self, text="OK", height = 1, width = 4,
+        #                                        command=self.get_sequence)
+        # self.EnterSequenceOKButton.grid(row=3, column=1, columnspan = 3,
+        #                                 padx=(20, 30),
+        #                                 sticky='W')
+        #
+        # self.LabelUserEnteredSequence = tk.Label(self, text='cat wants food', fg='grey')
+        # self.LabelUserEnteredSequence.grid(row=3, column=2,
+        #                                    padx=2, pady=2,
+        #                                    sticky='W')
 
-        self.LabelUserEnteredSequence = tk.Label(self, text='cat wants food', fg='grey')
-        self.LabelUserEnteredSequence.grid(row=3, column=2,
-                                           padx=2, pady=2,
-                                           sticky='W')
-
-        self.LabelMenuSequence = tk.Label(self, text='Use:')
-        self.LabelMenuSequence.grid(row=5, column=1,
-                               padx=(25, 5), pady=(5),
+        self.LabelMenuSequence = tk.Label(self, text='Use:', justify="left")
+        self.LabelMenuSequence.grid(row=5, column=0,
+                               padx=(20, 5), pady=(5),
                                sticky='W')
 
         # Checkboxes
 
         self.checkNumbers = tk.Checkbutton(self, text=self.seqCHOICES[0], variable=self.num)
-        self.checkNumbers.grid(row=6, column=1, columnspan=4,
-                               sticky='W')
+        self.checkNumbers.grid(row=6, column=1, sticky='W')
 
         self.checkSpecials = tk.Checkbutton(self, text=self.seqCHOICES[1], variable=self.spec)
-        self.checkSpecials.grid(row=7, column=1, columnspan=4,
-                                sticky='W')
+        self.checkSpecials.grid(row=7, column=1, sticky='W')
 
         self.checkMixed = tk.Checkbutton(self, text=self.seqCHOICES[2], variable=self.mix)
-        self.checkMixed.grid(row=8, column=1, columnspan=4,
-                             sticky='W')
+        self.checkMixed.grid(row=8, column=1, sticky='W')
 
     # METHODS
     def get_sequence(self):
         self.sequence = self.FieldEnterSequence.get()
-        self.LabelUserEnteredSequence.config(text=str(self.sequence))
+        # self.LabelUserEnteredSequence.config(text=str(self.sequence))
         return self.sequence
 
     def get_values_for_seqCHOICES(self):
