@@ -2,6 +2,10 @@
 
 ## changes:
 
+2020-03-18:
+* the program is working just fine, all functionality = OK
+* changing "OK" button to +/- buttons for better user experience
+
 2020-03-09 GUI code optimized
 * re-coded in OOP (GUI-2.py)
 * code more translarent
