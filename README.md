@@ -6,6 +6,12 @@
 * the program is working just fine, all functionality = OK
 * changing "OK" button to +/- buttons for better user experience
 
+2020-03-17:
+* all connected and working fine
+
+2020-03-14:
+* optimized code
+
 2020-03-09 GUI code optimized
 * re-coded in OOP (GUI-2.py)
 * code more translarent
