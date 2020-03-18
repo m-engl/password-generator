@@ -54,7 +54,7 @@ class Right_Frame(tk.Frame):
                                  padx=(20, 5), pady=(5),
                                  sticky='W')
 
-        self.FieldEnterWord = tk.Entry(self, width=20, bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterWord = tk.Entry(self, width=20)  # , relief="solid", borderwidth=1
         self.FieldEnterWord.grid(row=1, column=1,  columnspan=2,
                                  padx=(5, 2),
                                  sticky='W')
@@ -87,8 +87,7 @@ class Right_Frame(tk.Frame):
                                          padx=(45, 5),
                                          sticky='W')
 
-        self.FieldEnterHowMany_mixChange = tk.Entry(self, width=3,
-                                                   bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterHowMany_mixChange = tk.Entry(self, width=3)  # , relief="solid", borderwidth=1
         self.FieldEnterHowMany_mixChange.grid(row=7, column=2,
                                               padx=5, pady=2)
         self.FieldEnterHowMany_mixChange.insert(0, self.numberMixChange)
@@ -129,8 +128,7 @@ class Right_Frame(tk.Frame):
                                              padx=(45, 5),
                                              sticky='W')
 
-        self.FieldEnterHowMany_addSigns = tk.Entry(self, width=3,
-                                                   bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterHowMany_addSigns = tk.Entry(self, width=3)  # , relief="solid", borderwidth=1
         self.FieldEnterHowMany_addSigns.grid(row=12, column=2,
                                               padx=5, pady=2)
         self.FieldEnterHowMany_addSigns.insert(0, self.numberAddSigns)

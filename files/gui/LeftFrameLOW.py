@@ -35,7 +35,7 @@ class Left_Frame_LOW(tk.Frame):
                                          padx=(20, 5), pady=(5),
                                          sticky='W')
 
-        self.FieldEnterSequence = tk.Entry(self, width=30, bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterSequence = tk.Entry(self, width=30)  # , relief="solid", borderwidth=1
         self.FieldEnterSequence.grid(row=2, column=0, columnspan=2,
                                      padx=(25, 10))
         self.FieldEnterSequence.insert(0, self.sequence)

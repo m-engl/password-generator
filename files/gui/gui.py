@@ -1,5 +1,4 @@
 import tkinter as tk
-import random
 import win32clipboard
 import UpperFrame as Upper_Frame
 import LeftFrameUP as Left_Frame_UP
@@ -16,6 +15,8 @@ root = tk.Tk()
 # "GENERAL" VARIABLES
 theTitle = "My ULTIMATE (PASS)WORD Generator"
 theLogo = "img/logo.gif"
+
+Main_Set = config.Config()
 
 # MAIN APPLICATION
 class Main_Application(tk.Frame):
@@ -44,11 +45,16 @@ class Main_Application(tk.Frame):
         self.Wordy = Word_Based_Password.Word_Based_Password()
 
         # FRAMES
-        self.upperFrame = Upper_Frame.Upper_Frame(self, highlightbackground="black", highlightthickness=1)
-        self.leftFrameUpper = Left_Frame_UP.Left_Frame_UP(self, highlightbackground="black", highlightthickness=1)  #
-        self.leftFrameLower = Left_Frame_LOW.Left_Frame_LOW(self, highlightbackground="black", highlightthickness=1)  #
-        self.rightFrame = Right_Frame.Right_Frame(self, highlightbackground="black", highlightthickness=1)  #
-        self.lowerFrame = Lower_Frame.Lower_Frame(self, highlightbackground="black", highlightthickness=1)
+        self.upperFrame = Upper_Frame.Upper_Frame(self, highlightbackground=Set.frameLine_colour,
+                                                  highlightthickness=Set.frameLine_thick)
+        self.leftFrameUpper = Left_Frame_UP.Left_Frame_UP(self, highlightbackground=Set.frameLine_colour,
+                                                          highlightthickness=Set.frameLine_thick)
+        self.leftFrameLower = Left_Frame_LOW.Left_Frame_LOW(self, highlightbackground=Set.frameLine_colour,
+                                                            highlightthickness=Set.frameLine_thick)
+        self.rightFrame = Right_Frame.Right_Frame(self, highlightbackground=Set.frameLine_colour,
+                                                  highlightthickness=Set.frameLine_thick)
+        self.lowerFrame = Lower_Frame.Lower_Frame(self, highlightbackground=Set.frameLine_colour,
+                                                  highlightthickness=Set.frameLine_thick)
 
         # LAYOUT
         self.upperFrame.grid(row=0, column=0, columnspan=2, sticky='NESW')
@@ -56,6 +62,8 @@ class Main_Application(tk.Frame):
         self.leftFrameLower.grid(row=2, column=0, sticky='NESW')
         self.rightFrame.grid(row=1, column=1, rowspan=2, sticky='NESW')
         self.lowerFrame.grid(row=3, column=0, columnspan=2, sticky='NESW')
+
+
 
     # GUI METHODS
     def activate_chosen_frame(self):
@@ -90,7 +98,6 @@ class Main_Application(tk.Frame):
 
         for child in self.frameToEnable.winfo_children():
             child.config(state='normal')
-            print(child)
 
     # DISPLAY PASSWORD METHOD:
     def display_password(self):
@@ -138,9 +145,10 @@ class Main_Application(tk.Frame):
 
 # COME TO LIFE
 
-main = Main_Application(root)
-main.grid(column = 0, row = 0, padx = 10, pady = 10)
+main = Main_Application(root, highlightbackground=Main_Set.frameLine_colour, highlightthickness=Main_Set.frameLine_thick)
+main.grid(column = 0, row = 0)
 main.activate_chosen_frame()
+Main_Set.set_bg_colour(main)
 main.leftFrameUpper.get_length()
 main.leftFrameUpper.get_strength()
 main.leftFrameLower.get_sequence()

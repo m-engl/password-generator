@@ -38,7 +38,7 @@ class Left_Frame_UP(tk.Frame):
                                    padx=(20, 5), pady=5,
                                    sticky='W')
 
-        self.FieldEnterLength = tk.Entry(self, width=3, bg="snow2")  # , relief="solid", borderwidth=1
+        self.FieldEnterLength = tk.Entry(self, width=3)  # , relief="solid", borderwidth=1
         self.FieldEnterLength.grid(row=1, column=2,
                                    padx=2, pady=2)
         self.FieldEnterLength.insert(0, self.length)
