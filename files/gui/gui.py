@@ -13,8 +13,9 @@ import config
 root = tk.Tk()
 
 # "GENERAL" VARIABLES
-theTitle = "My ULTIMATE (PASS)WORD Generator"
-theLogo = "img/logo.gif"
+theTitle = "The ULTIMATE (PASS)WORD Generator"
+theLogo = "img/logomin.gif"
+theIcon = "img/icon.gif"
 
 Main_Set = config.Config()
 
@@ -27,6 +28,7 @@ class Main_Application(tk.Frame):
         # VARIABLES & SETTINGS:
         self.master = master
         master.title(theTitle)
+        master.iconphoto(False, tk.PhotoImage(file=theIcon))
         self.logo = tk.PhotoImage(file=theLogo)
 
         self.password = tk.StringVar()

@@ -15,7 +15,7 @@ class Random_Password_Generator:
         elif strength == 3:
             self.chosenSet = cs.strongSet
         elif strength == 4:
-            pass
+            self.chosenSet = cs.strongSet
 
         self.password = ''.join(random.choice(self.chosenSet) for _ in range(length))
         return self.password
