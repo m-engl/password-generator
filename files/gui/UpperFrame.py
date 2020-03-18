@@ -17,7 +17,8 @@ class Upper_Frame(tk.Frame):
 
         self.GenPassButton = tk.Button(self, text="Generate",
                                        width = 12, height=2,
-                                       command=self.master.display_password)
+                                       command=lambda:[self.master.display_password(),
+                                                       self.master.leftFrameUpper.get_length()])
         self.GenPassButton.grid(row=2, column=1, rowspan=2,
                                 padx=5, pady=5)
 

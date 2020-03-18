@@ -1,15 +1,18 @@
 import tkinter as tk
 import config
+import valuemethods
 
 class Left_Frame_UP(tk.Frame):
 
     def __init__(self, master, *args, **kwargs):
+
         tk.Frame.__init__(self, master, *args, **kwargs)
         self.master = master
 
         # VARS & SETTINGS
 
         Set = config.Config()
+        Values = valuemethods.Value_Action()
 
         self.length = int()
         self.length = Set.length
@@ -40,17 +43,29 @@ class Left_Frame_UP(tk.Frame):
                                    padx=2, pady=2)
         self.FieldEnterLength.insert(0, self.length)
 
-        self.EnterLengthOKButton = tk.Button(self, text="OK",
-                                             height=1, width=4,
-                                             command=self.get_length)
-        self.EnterLengthOKButton.grid(row=1, column=3,
+        self.PlusButton = tk.Button(self, text='+',
+                                    command=lambda: Values.increment(self.length, self.FieldEnterLength))
+        self.MinusButton = tk.Button(self, text='-',
+                                     command=lambda: Values.decrement(self.length, self.FieldEnterLength))
+
+        self.PlusButton.grid(row=1, column=3,
                                       padx=2, pady=2,
                                       sticky='W')
-
-        self.LabelUserEnteredLength = tk.Label(self, text='0', fg='grey')
-        self.LabelUserEnteredLength.grid(row=1, column=4,
+        self.MinusButton.grid(row=1, column=4,
                                          padx=2, pady=2,
                                          sticky='W')
+
+        # self.EnterLengthOKButton = tk.Button(self, text="OK",
+        #                                      height=1, width=4,
+        #                                      command=self.get_length)
+        # self.EnterLengthOKButton.grid(row=1, column=3,
+        #                               padx=2, pady=2,
+        #                               sticky='W')
+        #
+        # self.LabelUserEnteredLength = tk.Label(self, text='0', fg='grey')
+        # self.LabelUserEnteredLength.grid(row=1, column=4,
+        #                                  padx=2, pady=2,
+        #                                  sticky='W')
 
         self.LabelChooseStrength = tk.Label(self, text='Choose strength:')
         self.LabelChooseStrength.grid(row=2, column=1,
@@ -68,9 +83,27 @@ class Left_Frame_UP(tk.Frame):
                          sticky='W')
             self.i += 1
 
+    # # +/- BUTTON METHODS
+    #
+    # def increment(self):
+    #     self.length = int(self.length)
+    #     self.length += 1
+    #     self.length = str(self.length)
+    #     self.FieldEnterLength.delete(0, 'end')
+    #     self.FieldEnterLength.insert(0, self.length)
+    #
+    # def decrement(self):
+    #     self.length = int(self.length)
+    #     self.length -= 1
+    #     self.length = str(self.length)
+    #     self.FieldEnterLength.delete(0, 'end')
+    #     self.FieldEnterLength.insert(0, self.length)
+
+    # GET VALUES
+
     def get_length(self):
         self.length = self.FieldEnterLength.get()
-        self.LabelUserEnteredLength.config(text = str(self.length))
+        # self.LabelUserEnteredLength.config(text = str(self.length))
         return self.length
 
     def get_strength(self):

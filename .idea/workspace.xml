@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6371004-4389-46ce-9184-ce99aaaed041" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/files/gui/valuemethods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/LeftFrameUP.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/LeftFrameUP.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/UpperFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/UpperFrame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,22 +217,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583760581967" />
-    <state width="1344" height="220" key="GridCell.Tab.0.bottom" timestamp="1584483783837">
+    <state width="1344" height="220" key="GridCell.Tab.0.bottom" timestamp="1584519816029">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584483783837" />
-    <state width="1344" height="220" key="GridCell.Tab.0.center" timestamp="1584483783836">
+    <state width="1344" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584519816029" />
+    <state width="1344" height="220" key="GridCell.Tab.0.center" timestamp="1584519816028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584483783836" />
-    <state width="1344" height="220" key="GridCell.Tab.0.left" timestamp="1584483783836">
+    <state width="1344" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584519816028" />
+    <state width="1344" height="220" key="GridCell.Tab.0.left" timestamp="1584519816028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584483783836" />
-    <state width="1344" height="220" key="GridCell.Tab.0.right" timestamp="1584483783836">
+    <state width="1344" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584519816028" />
+    <state width="1344" height="220" key="GridCell.Tab.0.right" timestamp="1584519816028">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1344" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584483783836" />
+    <state width="1344" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584519816028" />
     <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1584120071984">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -249,10 +253,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584478550328" />
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584482310193">
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584515182489">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584482310193" />
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584515182489" />
     <state x="202" y="180" width="1010" height="441" key="dock-window-1" timestamp="1583760633058">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
