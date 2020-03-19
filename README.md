@@ -2,6 +2,10 @@
 
 ## changes:
 
+2020-03-19:
+* Beta-version ready for testing
+* Convertion to .exe
+
 2020-03-18:
 * the program is working just fine, all functionality = OK
 * changing "OK" button to +/- buttons for better user experience
