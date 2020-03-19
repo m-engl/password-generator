@@ -2,15 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6371004-4389-46ce-9184-ce99aaaed041" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/files/archive/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/charSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/customWord.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/deleted from modules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/generatorClasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/gui-old.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/guiFunctions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/menus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/sequence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/specialsDict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/gui/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/TkInterColorCharts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/grids.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/logo_WORKING.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/project2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/test1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/test2.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/LowerFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/LowerFrame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/gui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/help.html" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/help.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/img/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/img/Thumbs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/img/icon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/img/logo.gif" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/img/logo.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/gui/randomPwdGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/files/gui/randomPwdGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/files/logoWorks/Thumbs.db" beforeDir="false" afterPath="$PROJECT_DIR$/files/logoWorks/Thumbs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/charSet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/customWord.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/generatorClasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/deleted from modules.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/gui-old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/guiFunctions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/gui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/TkInterColorCharts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/grids.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/logo_WORKING.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/project.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/project2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/test1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/test2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/logoWorks/LOGO.psd" beforeDir="false" afterPath="$PROJECT_DIR$/files/logoWorks/LOGO.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/menus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/specialsDict.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,22 +254,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583760581967" />
-    <state width="1344" height="228" key="GridCell.Tab.0.bottom" timestamp="1584565553371">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1258" height="175" key="GridCell.Tab.0.bottom" timestamp="1584608103827">
+      <screen x="1366" y="-256" width="1280" height="984" />
     </state>
-    <state width="1344" height="228" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584565553371" />
-    <state width="1344" height="228" key="GridCell.Tab.0.center" timestamp="1584565553371">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1258" height="175" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1344" height="228" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584566216366" />
+    <state width="1258" height="175" key="GridCell.Tab.0.center" timestamp="1584608103827">
+      <screen x="1366" y="-256" width="1280" height="984" />
     </state>
-    <state width="1344" height="228" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584565553371" />
-    <state width="1344" height="228" key="GridCell.Tab.0.left" timestamp="1584565553371">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1258" height="175" key="GridCell.Tab.0.center/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1344" height="228" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584566216365" />
+    <state width="1258" height="175" key="GridCell.Tab.0.left" timestamp="1584608103826">
+      <screen x="1366" y="-256" width="1280" height="984" />
     </state>
-    <state width="1344" height="228" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584565553371" />
-    <state width="1344" height="228" key="GridCell.Tab.0.right" timestamp="1584565553371">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1258" height="175" key="GridCell.Tab.0.left/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103826" />
+    <state width="1344" height="228" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584566216365" />
+    <state width="1258" height="175" key="GridCell.Tab.0.right" timestamp="1584608103827">
+      <screen x="1366" y="-256" width="1280" height="984" />
     </state>
-    <state width="1344" height="228" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584565553371" />
+    <state width="1258" height="175" key="GridCell.Tab.0.right/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1344" height="228" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584566216366" />
     <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1584120071984">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -257,9 +294,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584478550328" />
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584561238150">
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584604835447">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="303" y="121" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584604835447" />
     <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584561238150" />
     <state x="202" y="180" width="1010" height="441" key="dock-window-1" timestamp="1583760633058">
       <screen x="0" y="0" width="1366" height="728" />
