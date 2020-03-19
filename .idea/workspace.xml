@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a6371004-4389-46ce-9184-ce99aaaed041" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/files/archive/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/charSet.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/customWord.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/deleted from modules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/generatorClasses.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/gui-old.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/guiFunctions.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/menus.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/sequence.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/archive/specialsDict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/gui/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/TkInterColorCharts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/grids.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/logo_WORKING.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/project.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/project2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/test1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/files/logoWorks/test2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/charSet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/customWord.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/generatorClasses.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/deleted from modules.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/gui-old.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/archive/guiFunctions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/gui.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/TkInterColorCharts.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/grids.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/logo_WORKING.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/project.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/project2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/test1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/img/test2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/gui/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/logoWorks/LOGO.psd" beforeDir="false" afterPath="$PROJECT_DIR$/files/logoWorks/LOGO.psd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/menus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/sequence.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/files/specialsDict.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1YoTzVynHzYBo6sqbTEnrYWOxgp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/files/gui/guiModules" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/gui/GUI-2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\M\Documents\GitHub\password-generator\files\gui\archive" />
+      <recent name="C:\Users\M\Documents\GitHub\password-generator\files\gui" />
+      <recent name="C:\Users\M\Documents\GitHub\password-generator\gui\logo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\M\Documents\GitHub\password-generator\files\gui\guiModules" />
+      <recent name="C:\Users\M\Documents\GitHub\password-generator\files\gui\chars" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.gui (1)">
+    <configuration name="LeftFrameLOW" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="password-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/files/gui/LeftFrameLOW.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="gui (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="password-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/files/gui/gui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="randomPwdGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="password-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui/guiModules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\M\Documents\GitHub\password-generator\files\gui\randomPwdGenerator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sequence (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="password-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui/guiModules" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\M\Documents\GitHub\password-generator\files\gui\sequence.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wordbased" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="password-generator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/files/gui/wordbased.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.gui (1)" />
+        <item itemvalue="Python.LeftFrameLOW" />
+        <item itemvalue="Python.wordbased" />
+        <item itemvalue="Python.sequence (1)" />
+        <item itemvalue="Python.randomPwdGenerator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6371004-4389-46ce-9184-ce99aaaed041" name="Default Changelist" comment="" />
+      <created>1583608209312</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583608209312</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="441" y="165" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584026744609">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="441" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1584026744609" />
+    <state x="402" y="0" key="#gui_(1)" timestamp="1583999602544">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="402" y="0" key="#gui_(1)/0.0.1366.728@0.0.1366.728" timestamp="1583999602544" />
+    <state x="337" y="0" key="CommitChangelistDialog2" timestamp="1583660934068">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="337" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1583660934068" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1583760633058">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1583760633058" />
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1583760581967">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583760581967" />
+    <state width="1258" height="175" key="GridCell.Tab.0.bottom" timestamp="1584608103827">
+      <screen x="1366" y="-256" width="1280" height="984" />
+    </state>
+    <state width="1258" height="175" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1344" height="228" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584566216366" />
+    <state width="1258" height="175" key="GridCell.Tab.0.center" timestamp="1584608103827">
+      <screen x="1366" y="-256" width="1280" height="984" />
+    </state>
+    <state width="1258" height="175" key="GridCell.Tab.0.center/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1344" height="228" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584566216365" />
+    <state width="1258" height="175" key="GridCell.Tab.0.left" timestamp="1584608103826">
+      <screen x="1366" y="-256" width="1280" height="984" />
+    </state>
+    <state width="1258" height="175" key="GridCell.Tab.0.left/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103826" />
+    <state width="1344" height="228" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584566216365" />
+    <state width="1258" height="175" key="GridCell.Tab.0.right" timestamp="1584608103827">
+      <screen x="1366" y="-256" width="1280" height="984" />
+    </state>
+    <state width="1258" height="175" key="GridCell.Tab.0.right/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1344" height="228" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584566216366" />
+    <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1584120071984">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="217" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584120071984" />
+    <state width="1344" height="217" key="GridCell.Tab.1.center" timestamp="1584120071984">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="217" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1584120071984" />
+    <state width="1344" height="217" key="GridCell.Tab.1.left" timestamp="1584120071984">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="217" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1584120071984" />
+    <state width="1344" height="217" key="GridCell.Tab.1.right" timestamp="1584120071984">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1344" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1584120071984" />
+    <state x="184" y="0" key="SettingsEditor" timestamp="1584478550328">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584478550328" />
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584604835447">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="303" y="121" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584604835447" />
+    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584561238150" />
+    <state x="202" y="180" width="1010" height="441" key="dock-window-1" timestamp="1583760633058">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="202" y="180" width="1010" height="441" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1583760633058" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1583953444258">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1583953444258" />
+  </component>
+</project>
