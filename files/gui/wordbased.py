@@ -34,26 +34,20 @@ class Word_Based_Password:
 
     def mix_chars_and_case(self, customWord, n):
 
-        # Step 1: randomize case in the word
         wordWithRandomCase = ''.join(self.randomize_case(letter) for letter in customWord)
 
-        # Step 2: convert the string to list
         wordAsList = list(wordWithRandomCase)
 
-        # Step 3: choose an 'n' number of letters to be changed to specials
-        # by getting their index number - randomly
         indexToChange = random.sample(range(0, len(customWord)), int(n))
-        # print(indexToChange)
 
-        # get to all the chosen index numbers and change them to lookalike special characters
         for indexNumber in indexToChange:
             x = indexNumber
             letterToSubstitute = customWord[x]
             letterAsNewCharacter = self.find_lookalike(letterToSubstitute)
-            wordAsList[x] = letterAsNewCharacter  # substitution
+            wordAsList[x] = letterAsNewCharacter
 
-        # convert the list to a string again
         mixedCaseAndSpecials = ''.join(wordAsList)
+
         return mixedCaseAndSpecials
 
     def add_new_characters(self, customWord, n, chosenSet):

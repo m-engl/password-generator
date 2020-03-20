@@ -9,7 +9,7 @@ class Config:
 
         # random
         self.length = 9
-        self.choosestrength = 2
+        self.choosestrength = 3
 
         # sequence
         self.sequence = "you pretty things"

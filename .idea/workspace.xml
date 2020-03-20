@@ -89,7 +89,7 @@
       <recent name="C:\Users\M\Documents\GitHub\password-generator\files\gui\chars" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.gui (1)">
+  <component name="RunManager" selected="Python.main">
     <configuration name="LeftFrameLOW" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="password-generator" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,7 +132,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="randomPwdGenerator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="password-generator" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,11 +140,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui/guiModules" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/files/gui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\M\Documents\GitHub\password-generator\files\gui\randomPwdGenerator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/files/gui/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -197,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.gui (1)" />
         <item itemvalue="Python.LeftFrameLOW" />
         <item itemvalue="Python.wordbased" />
         <item itemvalue="Python.sequence (1)" />
-        <item itemvalue="Python.randomPwdGenerator" />
       </list>
     </recent_temporary>
   </component>
@@ -254,25 +254,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1583760581967" />
-    <state width="1258" height="175" key="GridCell.Tab.0.bottom" timestamp="1584608103827">
-      <screen x="1366" y="-256" width="1280" height="984" />
+    <state width="1258" height="175" key="GridCell.Tab.0.bottom" timestamp="1584743014932">
+      <screen x="1366" y="-446" width="1280" height="984" />
     </state>
     <state width="1258" height="175" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1258" height="175" key="GridCell.Tab.0.bottom/0.0.1366.728/1366.-446.1280.984@1366.-446.1280.984" timestamp="1584743014932" />
     <state width="1344" height="228" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1584566216366" />
-    <state width="1258" height="175" key="GridCell.Tab.0.center" timestamp="1584608103827">
-      <screen x="1366" y="-256" width="1280" height="984" />
+    <state width="1258" height="175" key="GridCell.Tab.0.center" timestamp="1584743014932">
+      <screen x="1366" y="-446" width="1280" height="984" />
     </state>
     <state width="1258" height="175" key="GridCell.Tab.0.center/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1258" height="175" key="GridCell.Tab.0.center/0.0.1366.728/1366.-446.1280.984@1366.-446.1280.984" timestamp="1584743014932" />
     <state width="1344" height="228" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1584566216365" />
-    <state width="1258" height="175" key="GridCell.Tab.0.left" timestamp="1584608103826">
-      <screen x="1366" y="-256" width="1280" height="984" />
+    <state width="1258" height="175" key="GridCell.Tab.0.left" timestamp="1584743014932">
+      <screen x="1366" y="-446" width="1280" height="984" />
     </state>
     <state width="1258" height="175" key="GridCell.Tab.0.left/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103826" />
+    <state width="1258" height="175" key="GridCell.Tab.0.left/0.0.1366.728/1366.-446.1280.984@1366.-446.1280.984" timestamp="1584743014932" />
     <state width="1344" height="228" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1584566216365" />
-    <state width="1258" height="175" key="GridCell.Tab.0.right" timestamp="1584608103827">
-      <screen x="1366" y="-256" width="1280" height="984" />
+    <state width="1258" height="175" key="GridCell.Tab.0.right" timestamp="1584743014932">
+      <screen x="1366" y="-446" width="1280" height="984" />
     </state>
     <state width="1258" height="175" key="GridCell.Tab.0.right/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584608103827" />
+    <state width="1258" height="175" key="GridCell.Tab.0.right/0.0.1366.728/1366.-446.1280.984@1366.-446.1280.984" timestamp="1584743014932" />
     <state width="1344" height="228" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1584566216366" />
     <state width="1344" height="217" key="GridCell.Tab.1.bottom" timestamp="1584120071984">
       <screen x="0" y="0" width="1366" height="728" />
@@ -294,10 +298,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584478550328" />
-    <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584610566904">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="1650" y="-282" width="897" height="534" key="com.intellij.ide.util.TipDialog" timestamp="1584739867378">
+      <screen x="1366" y="-446" width="1280" height="984" />
     </state>
     <state x="303" y="121" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-256.1280.984@1366.-256.1280.984" timestamp="1584610566904" />
+    <state x="1650" y="-282" key="com.intellij.ide.util.TipDialog/0.0.1366.728/1366.-446.1280.984@1366.-446.1280.984" timestamp="1584739867378" />
     <state x="303" y="121" width="897" height="534" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1584561238150" />
     <state x="202" y="180" width="1010" height="441" key="dock-window-1" timestamp="1583760633058">
       <screen x="0" y="0" width="1366" height="728" />
