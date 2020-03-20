@@ -4,7 +4,7 @@
 
 2020-03-19:
 * Beta-version ready for testing
-* Convertion to .exe
+* See screenshot of the GUI. Everything is working fine.
 
 2020-03-18:
 * the program is working just fine, all functionality = OK
