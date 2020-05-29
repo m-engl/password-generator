@@ -3,8 +3,7 @@
 ## changes:
 
 2020-05-29:
-* noticed two issues.
-* fixed the sequence-part
+* noticed two issues and fixed them, see Issues/Closed.
 
 2020-03-19:
 * Beta-version ready for testing
