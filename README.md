@@ -2,6 +2,9 @@
 
 ## changes:
 
+2020-05-29:
+* noticed two issues. See projects. These are to be fixed either by prompts or setting up limits.
+
 2020-03-19:
 * Beta-version ready for testing
 * See screenshot of the GUI. Everything is working fine.
