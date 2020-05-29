@@ -81,9 +81,15 @@ class Word_Based_Password:
         elif self.choicesLevel1 == 2: # Change all the letters to look-alike\nnumbers and special characters
             self.password = "".join(self.find_lookalike(sign) for sign in self.theWord)
 
-        elif self.choicesLevel1 == 3: # Mix case and change a chosen number of letters to special characters and/or numbers
-            # self.wordWithRandomCase = "".join(self.find_lookalike(sign) for sign in self.theWord)
-            self.password = self.mix_chars_and_case(self.theWord, self.numberMixChange)
+        elif self.choicesLevel1 == 3: # Mix case and change a chosen number of letters to special
+                                      # characters and/or numbers
+                                      # self.wordWithRandomCase = "".join(self.find_lookalike(sign) for sign in self.theWord)
+
+            if int(self.numberMixChange) > int(len(theWord)):               # if the number of chars to be changed exceeds the number
+                self.password = "PROMPT: Choose a lower number!"  # of chars in theWord, display a prompt.
+
+            else:
+                self.password = self.mix_chars_and_case(self.theWord, self.numberMixChange)
 
         elif self.choicesLevel1 == 4: # Add a chosen number of special characters and/or numbers in between the word's letters
             if choicesLevel2 == [1, 0, 0]:  # NUMBERS:
@@ -113,7 +119,7 @@ class Word_Based_Password:
                 usersChoices = cs.specialChars + cs.numbers
                 self.password =  self.add_new_characters(self.randomized, self.numberAddSigns, usersChoices)
 
-            else:
+            else:                               # no checkbox checked
                 self.password = "PROMPT: Choose your options!"
 
         return self.password

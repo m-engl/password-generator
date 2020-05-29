@@ -82,7 +82,7 @@ class Sequence_Based_Generator:
             self.password = ''.join(self.randomize_case(sign) for sign in self.numsAndSpecsAdded)
 
         else:
-            self.message = "No option chosen!"
+            self.password = "PROMPT: Choose your options!"
 
         return self.password
 
