@@ -2,6 +2,9 @@
 
 ## changes:
 
+2020-05-29:
+* noticed two issues and fixed them, see Issues/Closed.
+
 2020-03-19:
 * Beta-version ready for testing
 * See screenshot of the GUI. Everything is working fine.
